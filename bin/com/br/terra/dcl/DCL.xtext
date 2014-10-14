@@ -21,6 +21,3 @@ Model:
      	typeName=('access' | 'declare' | 'handle' | 'create' | 'depend');
      
 EntityType: entity=('extend' | 'implement' | 'derive' | 'throw' | 'annotated');
- 	
- 	
- 
