@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.br.terra.dcl/src-gen" editDirectory="/com.br.terra.dcl.edit/src"
+    editorDirectory="/com.br.terra.dcl.editor/src" modelPluginID="com.br.terra.dcl"
+    forceOverwrite="true" modelName="DCL" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="com.br.terra.dcl.edit"
+    editorPluginID="com.br.terra.dcl.editor" runtimeVersion="2.10">
+  <genPackages prefix="DCL" basePackage="com.br.terra.dcl" disposableProviderFactory="true"
+      fileExtensions="dcl" ecorePackage="DCL.ecore#/">
+    <genClasses ecoreClass="DCL.ecore#//Model">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//Model/modDecl"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//Model/dCDecl"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//ModDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//ModDecl/name"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCDecl">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/t"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/elementType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/entityType"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//ElementType"/>
+    <genClasses ecoreClass="DCL.ecore#//BasicType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//BasicType/typeName"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//EntityType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//EntityType/entity"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
