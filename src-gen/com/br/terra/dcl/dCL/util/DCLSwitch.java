@@ -79,10 +79,50 @@ public class DCLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.MOD_DECL:
+      case DCLPackage.STRUCTURE_ELEMENT:
       {
-        ModDecl modDecl = (ModDecl)theEObject;
-        T result = caseModDecl(modDecl);
+        StructureElement structureElement = (StructureElement)theEObject;
+        T result = caseStructureElement(structureElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.LAYER:
+      {
+        Layer layer = (Layer)theEObject;
+        T result = caseLayer(layer);
+        if (result == null) result = caseStructureElement(layer);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.COMPONENT:
+      {
+        Component component = (Component)theEObject;
+        T result = caseComponent(component);
+        if (result == null) result = caseStructureElement(component);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.SUB_SYSTEM:
+      {
+        SubSystem subSystem = (SubSystem)theEObject;
+        T result = caseSubSystem(subSystem);
+        if (result == null) result = caseStructureElement(subSystem);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.ARCHITECTURE_VIEW:
+      {
+        ArchitectureView architectureView = (ArchitectureView)theEObject;
+        T result = caseArchitectureView(architectureView);
+        if (result == null) result = caseStructureElement(architectureView);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.SOFTWARE_SYSTEM:
+      {
+        SoftwareSystem softwareSystem = (SoftwareSystem)theEObject;
+        T result = caseSoftwareSystem(softwareSystem);
+        if (result == null) result = caseStructureElement(softwareSystem);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -90,6 +130,41 @@ public class DCLSwitch<T> extends Switch<T>
       {
         DCDecl dcDecl = (DCDecl)theEObject;
         T result = caseDCDecl(dcDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.ONLY:
+      {
+        Only only = (Only)theEObject;
+        T result = caseOnly(only);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.CAN:
+      {
+        Can can = (Can)theEObject;
+        T result = caseCan(can);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.CANNOT:
+      {
+        Cannot cannot = (Cannot)theEObject;
+        T result = caseCannot(cannot);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.ONLY2:
+      {
+        Only2 only2 = (Only2)theEObject;
+        T result = caseOnly2(only2);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.MUST:
+      {
+        Must must = (Must)theEObject;
+        T result = caseMust(must);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -137,17 +212,97 @@ public class DCLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Mod Decl</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Structure Element</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Mod Decl</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Structure Element</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseModDecl(ModDecl object)
+  public T caseStructureElement(StructureElement object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Layer</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Layer</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLayer(Layer object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Component</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Component</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseComponent(Component object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sub System</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sub System</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSubSystem(SubSystem object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Architecture View</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Architecture View</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseArchitectureView(ArchitectureView object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Software System</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Software System</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSoftwareSystem(SoftwareSystem object)
   {
     return null;
   }
@@ -164,6 +319,86 @@ public class DCLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDCDecl(DCDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Only</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Only</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOnly(Only object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Can</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Can</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCan(Can object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Cannot</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Cannot</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCannot(Cannot object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Only2</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Only2</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOnly2(Only2 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Must</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Must</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMust(Must object)
   {
     return null;
   }

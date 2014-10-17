@@ -65,8 +65,18 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
     switch (eClass.getClassifierID())
     {
       case DCLPackage.MODEL: return createModel();
-      case DCLPackage.MOD_DECL: return createModDecl();
+      case DCLPackage.STRUCTURE_ELEMENT: return createStructureElement();
+      case DCLPackage.LAYER: return createLayer();
+      case DCLPackage.COMPONENT: return createComponent();
+      case DCLPackage.SUB_SYSTEM: return createSubSystem();
+      case DCLPackage.ARCHITECTURE_VIEW: return createArchitectureView();
+      case DCLPackage.SOFTWARE_SYSTEM: return createSoftwareSystem();
       case DCLPackage.DC_DECL: return createDCDecl();
+      case DCLPackage.ONLY: return createOnly();
+      case DCLPackage.CAN: return createCan();
+      case DCLPackage.CANNOT: return createCannot();
+      case DCLPackage.ONLY2: return createOnly2();
+      case DCLPackage.MUST: return createMust();
       case DCLPackage.ELEMENT_TYPE: return createElementType();
       case DCLPackage.BASIC_TYPE: return createBasicType();
       case DCLPackage.ENTITY_TYPE: return createEntityType();
@@ -91,10 +101,65 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ModDecl createModDecl()
+  public StructureElement createStructureElement()
   {
-    ModDeclImpl modDecl = new ModDeclImpl();
-    return modDecl;
+    StructureElementImpl structureElement = new StructureElementImpl();
+    return structureElement;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Layer createLayer()
+  {
+    LayerImpl layer = new LayerImpl();
+    return layer;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Component createComponent()
+  {
+    ComponentImpl component = new ComponentImpl();
+    return component;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SubSystem createSubSystem()
+  {
+    SubSystemImpl subSystem = new SubSystemImpl();
+    return subSystem;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ArchitectureView createArchitectureView()
+  {
+    ArchitectureViewImpl architectureView = new ArchitectureViewImpl();
+    return architectureView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SoftwareSystem createSoftwareSystem()
+  {
+    SoftwareSystemImpl softwareSystem = new SoftwareSystemImpl();
+    return softwareSystem;
   }
 
   /**
@@ -106,6 +171,61 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
   {
     DCDeclImpl dcDecl = new DCDeclImpl();
     return dcDecl;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Only createOnly()
+  {
+    OnlyImpl only = new OnlyImpl();
+    return only;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Can createCan()
+  {
+    CanImpl can = new CanImpl();
+    return can;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Cannot createCannot()
+  {
+    CannotImpl cannot = new CannotImpl();
+    return cannot;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Only2 createOnly2()
+  {
+    Only2Impl only2 = new Only2Impl();
+    return only2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Must createMust()
+  {
+    MustImpl must = new MustImpl();
+    return must;
   }
 
   /**

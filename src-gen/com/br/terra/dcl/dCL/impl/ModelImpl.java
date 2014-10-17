@@ -4,8 +4,8 @@ package com.br.terra.dcl.dCL.impl;
 
 import com.br.terra.dcl.dCL.DCDecl;
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.ModDecl;
 import com.br.terra.dcl.dCL.Model;
+import com.br.terra.dcl.dCL.StructureElement;
 
 import java.util.Collection;
 
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.br.terra.dcl.dCL.impl.ModelImpl#getModDecl <em>Mod Decl</em>}</li>
+ *   <li>{@link com.br.terra.dcl.dCL.impl.ModelImpl#getStructureElements <em>Structure Elements</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.impl.ModelImpl#getDCDecl <em>DC Decl</em>}</li>
  * </ul>
  * </p>
@@ -38,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getModDecl() <em>Mod Decl</em>}' containment reference list.
+   * The cached value of the '{@link #getStructureElements() <em>Structure Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getModDecl()
+   * @see #getStructureElements()
    * @generated
    * @ordered
    */
-  protected EList<ModDecl> modDecl;
+  protected EList<StructureElement> structureElements;
 
   /**
    * The cached value of the '{@link #getDCDecl() <em>DC Decl</em>}' containment reference list.
@@ -83,13 +83,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ModDecl> getModDecl()
+  public EList<StructureElement> getStructureElements()
   {
-    if (modDecl == null)
+    if (structureElements == null)
     {
-      modDecl = new EObjectContainmentEList<ModDecl>(ModDecl.class, this, DCLPackage.MODEL__MOD_DECL);
+      structureElements = new EObjectContainmentEList<StructureElement>(StructureElement.class, this, DCLPackage.MODEL__STRUCTURE_ELEMENTS);
     }
-    return modDecl;
+    return structureElements;
   }
 
   /**
@@ -116,8 +116,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DCLPackage.MODEL__MOD_DECL:
-        return ((InternalEList<?>)getModDecl()).basicRemove(otherEnd, msgs);
+      case DCLPackage.MODEL__STRUCTURE_ELEMENTS:
+        return ((InternalEList<?>)getStructureElements()).basicRemove(otherEnd, msgs);
       case DCLPackage.MODEL__DC_DECL:
         return ((InternalEList<?>)getDCDecl()).basicRemove(otherEnd, msgs);
     }
@@ -134,8 +134,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DCLPackage.MODEL__MOD_DECL:
-        return getModDecl();
+      case DCLPackage.MODEL__STRUCTURE_ELEMENTS:
+        return getStructureElements();
       case DCLPackage.MODEL__DC_DECL:
         return getDCDecl();
     }
@@ -153,9 +153,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DCLPackage.MODEL__MOD_DECL:
-        getModDecl().clear();
-        getModDecl().addAll((Collection<? extends ModDecl>)newValue);
+      case DCLPackage.MODEL__STRUCTURE_ELEMENTS:
+        getStructureElements().clear();
+        getStructureElements().addAll((Collection<? extends StructureElement>)newValue);
         return;
       case DCLPackage.MODEL__DC_DECL:
         getDCDecl().clear();
@@ -175,8 +175,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DCLPackage.MODEL__MOD_DECL:
-        getModDecl().clear();
+      case DCLPackage.MODEL__STRUCTURE_ELEMENTS:
+        getStructureElements().clear();
         return;
       case DCLPackage.MODEL__DC_DECL:
         getDCDecl().clear();
@@ -195,8 +195,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case DCLPackage.MODEL__MOD_DECL:
-        return modDecl != null && !modDecl.isEmpty();
+      case DCLPackage.MODEL__STRUCTURE_ELEMENTS:
+        return structureElements != null && !structureElements.isEmpty();
       case DCLPackage.MODEL__DC_DECL:
         return dCDecl != null && !dCDecl.isEmpty();
     }

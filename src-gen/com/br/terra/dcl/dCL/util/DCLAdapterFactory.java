@@ -80,14 +80,64 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseModDecl(ModDecl object)
+      public Adapter caseStructureElement(StructureElement object)
       {
-        return createModDeclAdapter();
+        return createStructureElementAdapter();
+      }
+      @Override
+      public Adapter caseLayer(Layer object)
+      {
+        return createLayerAdapter();
+      }
+      @Override
+      public Adapter caseComponent(Component object)
+      {
+        return createComponentAdapter();
+      }
+      @Override
+      public Adapter caseSubSystem(SubSystem object)
+      {
+        return createSubSystemAdapter();
+      }
+      @Override
+      public Adapter caseArchitectureView(ArchitectureView object)
+      {
+        return createArchitectureViewAdapter();
+      }
+      @Override
+      public Adapter caseSoftwareSystem(SoftwareSystem object)
+      {
+        return createSoftwareSystemAdapter();
       }
       @Override
       public Adapter caseDCDecl(DCDecl object)
       {
         return createDCDeclAdapter();
+      }
+      @Override
+      public Adapter caseOnly(Only object)
+      {
+        return createOnlyAdapter();
+      }
+      @Override
+      public Adapter caseCan(Can object)
+      {
+        return createCanAdapter();
+      }
+      @Override
+      public Adapter caseCannot(Cannot object)
+      {
+        return createCannotAdapter();
+      }
+      @Override
+      public Adapter caseOnly2(Only2 object)
+      {
+        return createOnly2Adapter();
+      }
+      @Override
+      public Adapter caseMust(Must object)
+      {
+        return createMustAdapter();
       }
       @Override
       public Adapter caseElementType(ElementType object)
@@ -142,16 +192,91 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.ModDecl <em>Mod Decl</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.StructureElement <em>Structure Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.ModDecl
+   * @see com.br.terra.dcl.dCL.StructureElement
    * @generated
    */
-  public Adapter createModDeclAdapter()
+  public Adapter createStructureElementAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Layer <em>Layer</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.Layer
+   * @generated
+   */
+  public Adapter createLayerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Component <em>Component</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.Component
+   * @generated
+   */
+  public Adapter createComponentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.SubSystem <em>Sub System</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.SubSystem
+   * @generated
+   */
+  public Adapter createSubSystemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.ArchitectureView <em>Architecture View</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.ArchitectureView
+   * @generated
+   */
+  public Adapter createArchitectureViewAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.SoftwareSystem <em>Software System</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.SoftwareSystem
+   * @generated
+   */
+  public Adapter createSoftwareSystemAdapter()
   {
     return null;
   }
@@ -167,6 +292,81 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDCDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Only <em>Only</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.Only
+   * @generated
+   */
+  public Adapter createOnlyAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Can <em>Can</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.Can
+   * @generated
+   */
+  public Adapter createCanAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Cannot <em>Cannot</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.Cannot
+   * @generated
+   */
+  public Adapter createCannotAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Only2 <em>Only2</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.Only2
+   * @generated
+   */
+  public Adapter createOnly2Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Must <em>Must</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.Must
+   * @generated
+   */
+  public Adapter createMustAdapter()
   {
     return null;
   }

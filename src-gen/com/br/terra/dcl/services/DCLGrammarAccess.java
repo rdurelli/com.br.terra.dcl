@@ -23,8 +23,8 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cArchiteturalElementsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cModDeclAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cModDeclModDeclParserRuleCall_2_0 = (RuleCall)cModDeclAssignment_2.eContents().get(0);
+		private final Assignment cStructureElementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cStructureElementsStructureElementParserRuleCall_2_0 = (RuleCall)cStructureElementsAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cRestrictionsKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
@@ -33,10 +33,10 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Model:
-		//	"architeturalElements" "{" modDecl+=ModDecl* "}" "restrictions" "{" dCDecl+=DCDecl* "}";
+		//	"architeturalElements" "{" structureElements+=StructureElement+ "}" "restrictions" "{" dCDecl+=DCDecl* "}";
 		public ParserRule getRule() { return rule; }
 
-		//"architeturalElements" "{" modDecl+=ModDecl* "}" "restrictions" "{" dCDecl+=DCDecl* "}"
+		//"architeturalElements" "{" structureElements+=StructureElement+ "}" "restrictions" "{" dCDecl+=DCDecl* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"architeturalElements"
@@ -45,11 +45,11 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//modDecl+=ModDecl*
-		public Assignment getModDeclAssignment_2() { return cModDeclAssignment_2; }
+		//structureElements+=StructureElement+
+		public Assignment getStructureElementsAssignment_2() { return cStructureElementsAssignment_2; }
 
-		//ModDecl
-		public RuleCall getModDeclModDeclParserRuleCall_2_0() { return cModDeclModDeclParserRuleCall_2_0; }
+		//StructureElement
+		public RuleCall getStructureElementsStructureElementParserRuleCall_2_0() { return cStructureElementsStructureElementParserRuleCall_2_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
@@ -70,198 +70,270 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
-	public class ModDeclElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ModDecl");
+	public class StructureElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "StructureElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cLayerKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
-		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Keyword cComponentKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Keyword cSubSystemKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cNameAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_2_1_0 = (RuleCall)cNameAssignment_2_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
-		private final Keyword cArchitectureViewKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cNameAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_3_1_0 = (RuleCall)cNameAssignment_3_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		private final Group cGroup_4 = (Group)cAlternatives.eContents().get(4);
-		private final Keyword cSoftwareSystemKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cNameAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_4_1_0 = (RuleCall)cNameAssignment_4_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final RuleCall cLayerParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cComponentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cSubSystemParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cArchitectureViewParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cSoftwareSystemParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
-		//ModDecl:
-		//	"layer" name=ID ";" | "component" name=ID ";" | "subSystem" name=ID ";" | "architectureView" name=ID ";" |
+		//StructureElement:
+		//	Layer | Component | SubSystem | ArchitectureView | SoftwareSystem;
+		public ParserRule getRule() { return rule; }
+
+		//Layer | Component | SubSystem | ArchitectureView | SoftwareSystem
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//Layer
+		public RuleCall getLayerParserRuleCall_0() { return cLayerParserRuleCall_0; }
+
+		//Component
+		public RuleCall getComponentParserRuleCall_1() { return cComponentParserRuleCall_1; }
+
+		//SubSystem
+		public RuleCall getSubSystemParserRuleCall_2() { return cSubSystemParserRuleCall_2; }
+
+		//ArchitectureView
+		public RuleCall getArchitectureViewParserRuleCall_3() { return cArchitectureViewParserRuleCall_3; }
+
+		//SoftwareSystem
+		public RuleCall getSoftwareSystemParserRuleCall_4() { return cSoftwareSystemParserRuleCall_4; }
+	}
+
+	public class LayerElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Layer");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLayerKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//Layer:
+		//	"layer" name=ID ";";
+		public ParserRule getRule() { return rule; }
+
+		//"layer" name=ID ";"
+		public Group getGroup() { return cGroup; }
+
+		//"layer"
+		public Keyword getLayerKeyword_0() { return cLayerKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class ComponentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Component");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cComponentKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//Component:
+		//	"component" name=ID ";";
+		public ParserRule getRule() { return rule; }
+
+		//"component" name=ID ";"
+		public Group getGroup() { return cGroup; }
+
+		//"component"
+		public Keyword getComponentKeyword_0() { return cComponentKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class SubSystemElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SubSystem");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSubSystemKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//SubSystem:
+		//	"subSystem" name=ID ";";
+		public ParserRule getRule() { return rule; }
+
+		//"subSystem" name=ID ";"
+		public Group getGroup() { return cGroup; }
+
+		//"subSystem"
+		public Keyword getSubSystemKeyword_0() { return cSubSystemKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class ArchitectureViewElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ArchitectureView");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cArchitectureViewKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//ArchitectureView:
+		//	"architectureView" name=ID ";";
+		public ParserRule getRule() { return rule; }
+
+		//"architectureView" name=ID ";"
+		public Group getGroup() { return cGroup; }
+
+		//"architectureView"
+		public Keyword getArchitectureViewKeyword_0() { return cArchitectureViewKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//";"
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+	}
+
+	public class SoftwareSystemElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SoftwareSystem");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSoftwareSystemKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//SoftwareSystem:
 		//	"softwareSystem" name=ID ";";
 		public ParserRule getRule() { return rule; }
 
-		//"layer" name=ID ";" | "component" name=ID ";" | "subSystem" name=ID ";" | "architectureView" name=ID ";" |
 		//"softwareSystem" name=ID ";"
-		public Alternatives getAlternatives() { return cAlternatives; }
-
-		//"layer" name=ID ";"
-		public Group getGroup_0() { return cGroup_0; }
-
-		//"layer"
-		public Keyword getLayerKeyword_0_0() { return cLayerKeyword_0_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_0_2() { return cSemicolonKeyword_0_2; }
-
-		//"component" name=ID ";"
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"component"
-		public Keyword getComponentKeyword_1_0() { return cComponentKeyword_1_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_1_2() { return cSemicolonKeyword_1_2; }
-
-		//"subSystem" name=ID ";"
-		public Group getGroup_2() { return cGroup_2; }
-
-		//"subSystem"
-		public Keyword getSubSystemKeyword_2_0() { return cSubSystemKeyword_2_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_2_1() { return cNameAssignment_2_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_1_0() { return cNameIDTerminalRuleCall_2_1_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_2_2() { return cSemicolonKeyword_2_2; }
-
-		//"architectureView" name=ID ";"
-		public Group getGroup_3() { return cGroup_3; }
-
-		//"architectureView"
-		public Keyword getArchitectureViewKeyword_3_0() { return cArchitectureViewKeyword_3_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_3_1() { return cNameAssignment_3_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_3_1_0() { return cNameIDTerminalRuleCall_3_1_0; }
-
-		//";"
-		public Keyword getSemicolonKeyword_3_2() { return cSemicolonKeyword_3_2; }
-
-		//"softwareSystem" name=ID ";"
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup() { return cGroup; }
 
 		//"softwareSystem"
-		public Keyword getSoftwareSystemKeyword_4_0() { return cSoftwareSystemKeyword_4_0; }
+		public Keyword getSoftwareSystemKeyword_0() { return cSoftwareSystemKeyword_0; }
 
 		//name=ID
-		public Assignment getNameAssignment_4_1() { return cNameAssignment_4_1; }
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_4_1_0() { return cNameIDTerminalRuleCall_4_1_0; }
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
 		//";"
-		public Keyword getSemicolonKeyword_4_2() { return cSemicolonKeyword_4_2; }
+		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
 	}
 
 	public class DCDeclElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "DCDecl");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Keyword cOnlyKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cOnlyAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final RuleCall cOnlyOnlyParserRuleCall_0_0_0 = (RuleCall)cOnlyAssignment_0_0.eContents().get(0);
 		private final Assignment cTAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
-		private final CrossReference cTModDeclCrossReference_0_1_0 = (CrossReference)cTAssignment_0_1.eContents().get(0);
-		private final RuleCall cTModDeclIDTerminalRuleCall_0_1_0_1 = (RuleCall)cTModDeclCrossReference_0_1_0.eContents().get(1);
-		private final Keyword cCanKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final CrossReference cTStructureElementCrossReference_0_1_0 = (CrossReference)cTAssignment_0_1.eContents().get(0);
+		private final RuleCall cTStructureElementIDTerminalRuleCall_0_1_0_1 = (RuleCall)cTStructureElementCrossReference_0_1_0.eContents().get(1);
+		private final Assignment cCanAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final RuleCall cCanCanParserRuleCall_0_2_0 = (RuleCall)cCanAssignment_0_2.eContents().get(0);
 		private final Assignment cElementTypeAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
 		private final RuleCall cElementTypeElementTypeParserRuleCall_0_3_0 = (RuleCall)cElementTypeAssignment_0_3.eContents().get(0);
 		private final Assignment cTypeAssignment_0_4 = (Assignment)cGroup_0.eContents().get(4);
-		private final CrossReference cTypeModDeclCrossReference_0_4_0 = (CrossReference)cTypeAssignment_0_4.eContents().get(0);
-		private final RuleCall cTypeModDeclIDTerminalRuleCall_0_4_0_1 = (RuleCall)cTypeModDeclCrossReference_0_4_0.eContents().get(1);
+		private final CrossReference cTypeStructureElementCrossReference_0_4_0 = (CrossReference)cTypeAssignment_0_4.eContents().get(0);
+		private final RuleCall cTypeStructureElementIDTerminalRuleCall_0_4_0_1 = (RuleCall)cTypeStructureElementCrossReference_0_4_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_0_5 = (Keyword)cGroup_0.eContents().get(5);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Assignment cTAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final CrossReference cTModDeclCrossReference_1_0_0 = (CrossReference)cTAssignment_1_0.eContents().get(0);
-		private final RuleCall cTModDeclIDTerminalRuleCall_1_0_0_1 = (RuleCall)cTModDeclCrossReference_1_0_0.eContents().get(1);
-		private final Keyword cCannotKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final CrossReference cTStructureElementCrossReference_1_0_0 = (CrossReference)cTAssignment_1_0.eContents().get(0);
+		private final RuleCall cTStructureElementIDTerminalRuleCall_1_0_0_1 = (RuleCall)cTStructureElementCrossReference_1_0_0.eContents().get(1);
+		private final Assignment cCannotAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cCannotCannotParserRuleCall_1_1_0 = (RuleCall)cCannotAssignment_1_1.eContents().get(0);
 		private final Assignment cElementTypeAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
 		private final RuleCall cElementTypeElementTypeParserRuleCall_1_2_0 = (RuleCall)cElementTypeAssignment_1_2.eContents().get(0);
 		private final Assignment cTypeAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
-		private final CrossReference cTypeModDeclCrossReference_1_3_0 = (CrossReference)cTypeAssignment_1_3.eContents().get(0);
-		private final RuleCall cTypeModDeclIDTerminalRuleCall_1_3_0_1 = (RuleCall)cTypeModDeclCrossReference_1_3_0.eContents().get(1);
+		private final CrossReference cTypeStructureElementCrossReference_1_3_0 = (CrossReference)cTypeAssignment_1_3.eContents().get(0);
+		private final RuleCall cTypeStructureElementIDTerminalRuleCall_1_3_0_1 = (RuleCall)cTypeStructureElementCrossReference_1_3_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Assignment cTAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final CrossReference cTModDeclCrossReference_2_0_0 = (CrossReference)cTAssignment_2_0.eContents().get(0);
-		private final RuleCall cTModDeclIDTerminalRuleCall_2_0_0_1 = (RuleCall)cTModDeclCrossReference_2_0_0.eContents().get(1);
-		private final Keyword cCanKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final CrossReference cTStructureElementCrossReference_2_0_0 = (CrossReference)cTAssignment_2_0.eContents().get(0);
+		private final RuleCall cTStructureElementIDTerminalRuleCall_2_0_0_1 = (RuleCall)cTStructureElementCrossReference_2_0_0.eContents().get(1);
+		private final Assignment cCanAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cCanCanParserRuleCall_2_1_0 = (RuleCall)cCanAssignment_2_1.eContents().get(0);
 		private final Assignment cElementTypeAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
 		private final RuleCall cElementTypeElementTypeParserRuleCall_2_2_0 = (RuleCall)cElementTypeAssignment_2_2.eContents().get(0);
-		private final Keyword cOnlyKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
+		private final Assignment cOnly2Assignment_2_3 = (Assignment)cGroup_2.eContents().get(3);
+		private final RuleCall cOnly2Only2ParserRuleCall_2_3_0 = (RuleCall)cOnly2Assignment_2_3.eContents().get(0);
 		private final Assignment cTypeAssignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
-		private final CrossReference cTypeModDeclCrossReference_2_4_0 = (CrossReference)cTypeAssignment_2_4.eContents().get(0);
-		private final RuleCall cTypeModDeclIDTerminalRuleCall_2_4_0_1 = (RuleCall)cTypeModDeclCrossReference_2_4_0.eContents().get(1);
+		private final CrossReference cTypeStructureElementCrossReference_2_4_0 = (CrossReference)cTypeAssignment_2_4.eContents().get(0);
+		private final RuleCall cTypeStructureElementIDTerminalRuleCall_2_4_0_1 = (RuleCall)cTypeStructureElementCrossReference_2_4_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_2_5 = (Keyword)cGroup_2.eContents().get(5);
 		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
 		private final Assignment cTAssignment_3_0 = (Assignment)cGroup_3.eContents().get(0);
-		private final CrossReference cTModDeclCrossReference_3_0_0 = (CrossReference)cTAssignment_3_0.eContents().get(0);
-		private final RuleCall cTModDeclIDTerminalRuleCall_3_0_0_1 = (RuleCall)cTModDeclCrossReference_3_0_0.eContents().get(1);
-		private final Keyword cMustKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final CrossReference cTStructureElementCrossReference_3_0_0 = (CrossReference)cTAssignment_3_0.eContents().get(0);
+		private final RuleCall cTStructureElementIDTerminalRuleCall_3_0_0_1 = (RuleCall)cTStructureElementCrossReference_3_0_0.eContents().get(1);
+		private final Assignment cMustAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cMustMustParserRuleCall_3_1_0 = (RuleCall)cMustAssignment_3_1.eContents().get(0);
 		private final Assignment cEntityTypeAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
 		private final RuleCall cEntityTypeEntityTypeParserRuleCall_3_2_0 = (RuleCall)cEntityTypeAssignment_3_2.eContents().get(0);
 		private final Assignment cTypeAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
-		private final CrossReference cTypeModDeclCrossReference_3_3_0 = (CrossReference)cTypeAssignment_3_3.eContents().get(0);
-		private final RuleCall cTypeModDeclIDTerminalRuleCall_3_3_0_1 = (RuleCall)cTypeModDeclCrossReference_3_3_0.eContents().get(1);
+		private final CrossReference cTypeStructureElementCrossReference_3_3_0 = (CrossReference)cTypeAssignment_3_3.eContents().get(0);
+		private final RuleCall cTypeStructureElementIDTerminalRuleCall_3_3_0_1 = (RuleCall)cTypeStructureElementCrossReference_3_3_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
 		
 		//DCDecl:
-		//	"Only" t=[ModDecl] "can-" elementType=ElementType type=[ModDecl] ";" | t=[ModDecl] "cannot-" elementType=ElementType
-		//	type=[ModDecl] ";" | t=[ModDecl] "can-" elementType=ElementType "-only" type=[ModDecl] ";" | t=[ModDecl] "must-"
-		//	entityType=EntityType type=[ModDecl] ";";
+		//	only=Only t=[StructureElement] can=Can elementType=ElementType type=[StructureElement] ";" | t=[StructureElement]
+		//	cannot=Cannot elementType=ElementType type=[StructureElement] ";" | t=[StructureElement] can=Can
+		//	elementType=ElementType only2=Only2 type=[StructureElement] ";" | t=[StructureElement] must=Must entityType=EntityType
+		//	type=[StructureElement] ";";
 		public ParserRule getRule() { return rule; }
 
-		//"Only" t=[ModDecl] "can-" elementType=ElementType type=[ModDecl] ";" | t=[ModDecl] "cannot-" elementType=ElementType
-		//type=[ModDecl] ";" | t=[ModDecl] "can-" elementType=ElementType "-only" type=[ModDecl] ";" | t=[ModDecl] "must-"
-		//entityType=EntityType type=[ModDecl] ";"
+		//only=Only t=[StructureElement] can=Can elementType=ElementType type=[StructureElement] ";" | t=[StructureElement]
+		//cannot=Cannot elementType=ElementType type=[StructureElement] ";" | t=[StructureElement] can=Can
+		//elementType=ElementType only2=Only2 type=[StructureElement] ";" | t=[StructureElement] must=Must entityType=EntityType
+		//type=[StructureElement] ";"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//"Only" t=[ModDecl] "can-" elementType=ElementType type=[ModDecl] ";"
+		//only=Only t=[StructureElement] can=Can elementType=ElementType type=[StructureElement] ";"
 		public Group getGroup_0() { return cGroup_0; }
 
-		//"Only"
-		public Keyword getOnlyKeyword_0_0() { return cOnlyKeyword_0_0; }
+		//only=Only
+		public Assignment getOnlyAssignment_0_0() { return cOnlyAssignment_0_0; }
 
-		//t=[ModDecl]
+		//Only
+		public RuleCall getOnlyOnlyParserRuleCall_0_0_0() { return cOnlyOnlyParserRuleCall_0_0_0; }
+
+		//t=[StructureElement]
 		public Assignment getTAssignment_0_1() { return cTAssignment_0_1; }
 
-		//[ModDecl]
-		public CrossReference getTModDeclCrossReference_0_1_0() { return cTModDeclCrossReference_0_1_0; }
+		//[StructureElement]
+		public CrossReference getTStructureElementCrossReference_0_1_0() { return cTStructureElementCrossReference_0_1_0; }
 
 		//ID
-		public RuleCall getTModDeclIDTerminalRuleCall_0_1_0_1() { return cTModDeclIDTerminalRuleCall_0_1_0_1; }
+		public RuleCall getTStructureElementIDTerminalRuleCall_0_1_0_1() { return cTStructureElementIDTerminalRuleCall_0_1_0_1; }
 
-		//"can-"
-		public Keyword getCanKeyword_0_2() { return cCanKeyword_0_2; }
+		//can=Can
+		public Assignment getCanAssignment_0_2() { return cCanAssignment_0_2; }
+
+		//Can
+		public RuleCall getCanCanParserRuleCall_0_2_0() { return cCanCanParserRuleCall_0_2_0; }
 
 		//elementType=ElementType
 		public Assignment getElementTypeAssignment_0_3() { return cElementTypeAssignment_0_3; }
@@ -269,32 +341,35 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ElementType
 		public RuleCall getElementTypeElementTypeParserRuleCall_0_3_0() { return cElementTypeElementTypeParserRuleCall_0_3_0; }
 
-		//type=[ModDecl]
+		//type=[StructureElement]
 		public Assignment getTypeAssignment_0_4() { return cTypeAssignment_0_4; }
 
-		//[ModDecl]
-		public CrossReference getTypeModDeclCrossReference_0_4_0() { return cTypeModDeclCrossReference_0_4_0; }
+		//[StructureElement]
+		public CrossReference getTypeStructureElementCrossReference_0_4_0() { return cTypeStructureElementCrossReference_0_4_0; }
 
 		//ID
-		public RuleCall getTypeModDeclIDTerminalRuleCall_0_4_0_1() { return cTypeModDeclIDTerminalRuleCall_0_4_0_1; }
+		public RuleCall getTypeStructureElementIDTerminalRuleCall_0_4_0_1() { return cTypeStructureElementIDTerminalRuleCall_0_4_0_1; }
 
 		//";"
 		public Keyword getSemicolonKeyword_0_5() { return cSemicolonKeyword_0_5; }
 
-		//t=[ModDecl] "cannot-" elementType=ElementType type=[ModDecl] ";"
+		//t=[StructureElement] cannot=Cannot elementType=ElementType type=[StructureElement] ";"
 		public Group getGroup_1() { return cGroup_1; }
 
-		//t=[ModDecl]
+		//t=[StructureElement]
 		public Assignment getTAssignment_1_0() { return cTAssignment_1_0; }
 
-		//[ModDecl]
-		public CrossReference getTModDeclCrossReference_1_0_0() { return cTModDeclCrossReference_1_0_0; }
+		//[StructureElement]
+		public CrossReference getTStructureElementCrossReference_1_0_0() { return cTStructureElementCrossReference_1_0_0; }
 
 		//ID
-		public RuleCall getTModDeclIDTerminalRuleCall_1_0_0_1() { return cTModDeclIDTerminalRuleCall_1_0_0_1; }
+		public RuleCall getTStructureElementIDTerminalRuleCall_1_0_0_1() { return cTStructureElementIDTerminalRuleCall_1_0_0_1; }
 
-		//"cannot-"
-		public Keyword getCannotKeyword_1_1() { return cCannotKeyword_1_1; }
+		//cannot=Cannot
+		public Assignment getCannotAssignment_1_1() { return cCannotAssignment_1_1; }
+
+		//Cannot
+		public RuleCall getCannotCannotParserRuleCall_1_1_0() { return cCannotCannotParserRuleCall_1_1_0; }
 
 		//elementType=ElementType
 		public Assignment getElementTypeAssignment_1_2() { return cElementTypeAssignment_1_2; }
@@ -302,32 +377,35 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ElementType
 		public RuleCall getElementTypeElementTypeParserRuleCall_1_2_0() { return cElementTypeElementTypeParserRuleCall_1_2_0; }
 
-		//type=[ModDecl]
+		//type=[StructureElement]
 		public Assignment getTypeAssignment_1_3() { return cTypeAssignment_1_3; }
 
-		//[ModDecl]
-		public CrossReference getTypeModDeclCrossReference_1_3_0() { return cTypeModDeclCrossReference_1_3_0; }
+		//[StructureElement]
+		public CrossReference getTypeStructureElementCrossReference_1_3_0() { return cTypeStructureElementCrossReference_1_3_0; }
 
 		//ID
-		public RuleCall getTypeModDeclIDTerminalRuleCall_1_3_0_1() { return cTypeModDeclIDTerminalRuleCall_1_3_0_1; }
+		public RuleCall getTypeStructureElementIDTerminalRuleCall_1_3_0_1() { return cTypeStructureElementIDTerminalRuleCall_1_3_0_1; }
 
 		//";"
 		public Keyword getSemicolonKeyword_1_4() { return cSemicolonKeyword_1_4; }
 
-		//t=[ModDecl] "can-" elementType=ElementType "-only" type=[ModDecl] ";"
+		//t=[StructureElement] can=Can elementType=ElementType only2=Only2 type=[StructureElement] ";"
 		public Group getGroup_2() { return cGroup_2; }
 
-		//t=[ModDecl]
+		//t=[StructureElement]
 		public Assignment getTAssignment_2_0() { return cTAssignment_2_0; }
 
-		//[ModDecl]
-		public CrossReference getTModDeclCrossReference_2_0_0() { return cTModDeclCrossReference_2_0_0; }
+		//[StructureElement]
+		public CrossReference getTStructureElementCrossReference_2_0_0() { return cTStructureElementCrossReference_2_0_0; }
 
 		//ID
-		public RuleCall getTModDeclIDTerminalRuleCall_2_0_0_1() { return cTModDeclIDTerminalRuleCall_2_0_0_1; }
+		public RuleCall getTStructureElementIDTerminalRuleCall_2_0_0_1() { return cTStructureElementIDTerminalRuleCall_2_0_0_1; }
 
-		//"can-"
-		public Keyword getCanKeyword_2_1() { return cCanKeyword_2_1; }
+		//can=Can
+		public Assignment getCanAssignment_2_1() { return cCanAssignment_2_1; }
+
+		//Can
+		public RuleCall getCanCanParserRuleCall_2_1_0() { return cCanCanParserRuleCall_2_1_0; }
 
 		//elementType=ElementType
 		public Assignment getElementTypeAssignment_2_2() { return cElementTypeAssignment_2_2; }
@@ -335,35 +413,41 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ElementType
 		public RuleCall getElementTypeElementTypeParserRuleCall_2_2_0() { return cElementTypeElementTypeParserRuleCall_2_2_0; }
 
-		//"-only"
-		public Keyword getOnlyKeyword_2_3() { return cOnlyKeyword_2_3; }
+		//only2=Only2
+		public Assignment getOnly2Assignment_2_3() { return cOnly2Assignment_2_3; }
 
-		//type=[ModDecl]
+		//Only2
+		public RuleCall getOnly2Only2ParserRuleCall_2_3_0() { return cOnly2Only2ParserRuleCall_2_3_0; }
+
+		//type=[StructureElement]
 		public Assignment getTypeAssignment_2_4() { return cTypeAssignment_2_4; }
 
-		//[ModDecl]
-		public CrossReference getTypeModDeclCrossReference_2_4_0() { return cTypeModDeclCrossReference_2_4_0; }
+		//[StructureElement]
+		public CrossReference getTypeStructureElementCrossReference_2_4_0() { return cTypeStructureElementCrossReference_2_4_0; }
 
 		//ID
-		public RuleCall getTypeModDeclIDTerminalRuleCall_2_4_0_1() { return cTypeModDeclIDTerminalRuleCall_2_4_0_1; }
+		public RuleCall getTypeStructureElementIDTerminalRuleCall_2_4_0_1() { return cTypeStructureElementIDTerminalRuleCall_2_4_0_1; }
 
 		//";"
 		public Keyword getSemicolonKeyword_2_5() { return cSemicolonKeyword_2_5; }
 
-		//t=[ModDecl] "must-" entityType=EntityType type=[ModDecl] ";"
+		//t=[StructureElement] must=Must entityType=EntityType type=[StructureElement] ";"
 		public Group getGroup_3() { return cGroup_3; }
 
-		//t=[ModDecl]
+		//t=[StructureElement]
 		public Assignment getTAssignment_3_0() { return cTAssignment_3_0; }
 
-		//[ModDecl]
-		public CrossReference getTModDeclCrossReference_3_0_0() { return cTModDeclCrossReference_3_0_0; }
+		//[StructureElement]
+		public CrossReference getTStructureElementCrossReference_3_0_0() { return cTStructureElementCrossReference_3_0_0; }
 
 		//ID
-		public RuleCall getTModDeclIDTerminalRuleCall_3_0_0_1() { return cTModDeclIDTerminalRuleCall_3_0_0_1; }
+		public RuleCall getTStructureElementIDTerminalRuleCall_3_0_0_1() { return cTStructureElementIDTerminalRuleCall_3_0_0_1; }
 
-		//"must-"
-		public Keyword getMustKeyword_3_1() { return cMustKeyword_3_1; }
+		//must=Must
+		public Assignment getMustAssignment_3_1() { return cMustAssignment_3_1; }
+
+		//Must
+		public RuleCall getMustMustParserRuleCall_3_1_0() { return cMustMustParserRuleCall_3_1_0; }
 
 		//entityType=EntityType
 		public Assignment getEntityTypeAssignment_3_2() { return cEntityTypeAssignment_3_2; }
@@ -371,17 +455,97 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//EntityType
 		public RuleCall getEntityTypeEntityTypeParserRuleCall_3_2_0() { return cEntityTypeEntityTypeParserRuleCall_3_2_0; }
 
-		//type=[ModDecl]
+		//type=[StructureElement]
 		public Assignment getTypeAssignment_3_3() { return cTypeAssignment_3_3; }
 
-		//[ModDecl]
-		public CrossReference getTypeModDeclCrossReference_3_3_0() { return cTypeModDeclCrossReference_3_3_0; }
+		//[StructureElement]
+		public CrossReference getTypeStructureElementCrossReference_3_3_0() { return cTypeStructureElementCrossReference_3_3_0; }
 
 		//ID
-		public RuleCall getTypeModDeclIDTerminalRuleCall_3_3_0_1() { return cTypeModDeclIDTerminalRuleCall_3_3_0_1; }
+		public RuleCall getTypeStructureElementIDTerminalRuleCall_3_3_0_1() { return cTypeStructureElementIDTerminalRuleCall_3_3_0_1; }
 
 		//";"
 		public Keyword getSemicolonKeyword_3_4() { return cSemicolonKeyword_3_4; }
+	}
+
+	public class OnlyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Only");
+		private final Assignment cOnlyAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cOnlyOnlyKeyword_0 = (Keyword)cOnlyAssignment.eContents().get(0);
+		
+		//Only:
+		//	only="only";
+		public ParserRule getRule() { return rule; }
+
+		//only="only"
+		public Assignment getOnlyAssignment() { return cOnlyAssignment; }
+
+		//"only"
+		public Keyword getOnlyOnlyKeyword_0() { return cOnlyOnlyKeyword_0; }
+	}
+
+	public class CanElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Can");
+		private final Assignment cCanAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cCanCanKeyword_0 = (Keyword)cCanAssignment.eContents().get(0);
+		
+		//Can:
+		//	can="can-";
+		public ParserRule getRule() { return rule; }
+
+		//can="can-"
+		public Assignment getCanAssignment() { return cCanAssignment; }
+
+		//"can-"
+		public Keyword getCanCanKeyword_0() { return cCanCanKeyword_0; }
+	}
+
+	public class CannotElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Cannot");
+		private final Assignment cCannotAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cCannotCannotKeyword_0 = (Keyword)cCannotAssignment.eContents().get(0);
+		
+		//Cannot:
+		//	cannot="cannot-";
+		public ParserRule getRule() { return rule; }
+
+		//cannot="cannot-"
+		public Assignment getCannotAssignment() { return cCannotAssignment; }
+
+		//"cannot-"
+		public Keyword getCannotCannotKeyword_0() { return cCannotCannotKeyword_0; }
+	}
+
+	public class Only2Elements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Only2");
+		private final Assignment cOnly2Assignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cOnly2OnlyKeyword_0 = (Keyword)cOnly2Assignment.eContents().get(0);
+		
+		//Only2:
+		//	only2="-only";
+		public ParserRule getRule() { return rule; }
+
+		//only2="-only"
+		public Assignment getOnly2Assignment() { return cOnly2Assignment; }
+
+		//"-only"
+		public Keyword getOnly2OnlyKeyword_0() { return cOnly2OnlyKeyword_0; }
+	}
+
+	public class MustElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Must");
+		private final Assignment cMustAssignment = (Assignment)rule.eContents().get(1);
+		private final Keyword cMustMustKeyword_0 = (Keyword)cMustAssignment.eContents().get(0);
+		
+		//Must:
+		//	must="must-";
+		public ParserRule getRule() { return rule; }
+
+		//must="must-"
+		public Assignment getMustAssignment() { return cMustAssignment; }
+
+		//"must-"
+		public Keyword getMustMustKeyword_0() { return cMustMustKeyword_0; }
 	}
 
 	public class ElementTypeElements extends AbstractParserRuleElementFinder {
@@ -478,8 +642,18 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private final ModelElements pModel;
-	private final ModDeclElements pModDecl;
+	private final StructureElementElements pStructureElement;
+	private final LayerElements pLayer;
+	private final ComponentElements pComponent;
+	private final SubSystemElements pSubSystem;
+	private final ArchitectureViewElements pArchitectureView;
+	private final SoftwareSystemElements pSoftwareSystem;
 	private final DCDeclElements pDCDecl;
+	private final OnlyElements pOnly;
+	private final CanElements pCan;
+	private final CannotElements pCannot;
+	private final Only2Elements pOnly2;
+	private final MustElements pMust;
 	private final ElementTypeElements pElementType;
 	private final BasicTypeElements pBasicType;
 	private final EntityTypeElements pEntityType;
@@ -494,8 +668,18 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pModDecl = new ModDeclElements();
+		this.pStructureElement = new StructureElementElements();
+		this.pLayer = new LayerElements();
+		this.pComponent = new ComponentElements();
+		this.pSubSystem = new SubSystemElements();
+		this.pArchitectureView = new ArchitectureViewElements();
+		this.pSoftwareSystem = new SoftwareSystemElements();
 		this.pDCDecl = new DCDeclElements();
+		this.pOnly = new OnlyElements();
+		this.pCan = new CanElements();
+		this.pCannot = new CannotElements();
+		this.pOnly2 = new Only2Elements();
+		this.pMust = new MustElements();
 		this.pElementType = new ElementTypeElements();
 		this.pBasicType = new BasicTypeElements();
 		this.pEntityType = new EntityTypeElements();
@@ -529,7 +713,7 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	"architeturalElements" "{" modDecl+=ModDecl* "}" "restrictions" "{" dCDecl+=DCDecl* "}";
+	//	"architeturalElements" "{" structureElements+=StructureElement+ "}" "restrictions" "{" dCDecl+=DCDecl* "}";
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -538,27 +722,127 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		return getModelAccess().getRule();
 	}
 
-	//ModDecl:
-	//	"layer" name=ID ";" | "component" name=ID ";" | "subSystem" name=ID ";" | "architectureView" name=ID ";" |
-	//	"softwareSystem" name=ID ";";
-	public ModDeclElements getModDeclAccess() {
-		return pModDecl;
+	//StructureElement:
+	//	Layer | Component | SubSystem | ArchitectureView | SoftwareSystem;
+	public StructureElementElements getStructureElementAccess() {
+		return pStructureElement;
 	}
 	
-	public ParserRule getModDeclRule() {
-		return getModDeclAccess().getRule();
+	public ParserRule getStructureElementRule() {
+		return getStructureElementAccess().getRule();
+	}
+
+	//Layer:
+	//	"layer" name=ID ";";
+	public LayerElements getLayerAccess() {
+		return pLayer;
+	}
+	
+	public ParserRule getLayerRule() {
+		return getLayerAccess().getRule();
+	}
+
+	//Component:
+	//	"component" name=ID ";";
+	public ComponentElements getComponentAccess() {
+		return pComponent;
+	}
+	
+	public ParserRule getComponentRule() {
+		return getComponentAccess().getRule();
+	}
+
+	//SubSystem:
+	//	"subSystem" name=ID ";";
+	public SubSystemElements getSubSystemAccess() {
+		return pSubSystem;
+	}
+	
+	public ParserRule getSubSystemRule() {
+		return getSubSystemAccess().getRule();
+	}
+
+	//ArchitectureView:
+	//	"architectureView" name=ID ";";
+	public ArchitectureViewElements getArchitectureViewAccess() {
+		return pArchitectureView;
+	}
+	
+	public ParserRule getArchitectureViewRule() {
+		return getArchitectureViewAccess().getRule();
+	}
+
+	//SoftwareSystem:
+	//	"softwareSystem" name=ID ";";
+	public SoftwareSystemElements getSoftwareSystemAccess() {
+		return pSoftwareSystem;
+	}
+	
+	public ParserRule getSoftwareSystemRule() {
+		return getSoftwareSystemAccess().getRule();
 	}
 
 	//DCDecl:
-	//	"Only" t=[ModDecl] "can-" elementType=ElementType type=[ModDecl] ";" | t=[ModDecl] "cannot-" elementType=ElementType
-	//	type=[ModDecl] ";" | t=[ModDecl] "can-" elementType=ElementType "-only" type=[ModDecl] ";" | t=[ModDecl] "must-"
-	//	entityType=EntityType type=[ModDecl] ";";
+	//	only=Only t=[StructureElement] can=Can elementType=ElementType type=[StructureElement] ";" | t=[StructureElement]
+	//	cannot=Cannot elementType=ElementType type=[StructureElement] ";" | t=[StructureElement] can=Can
+	//	elementType=ElementType only2=Only2 type=[StructureElement] ";" | t=[StructureElement] must=Must entityType=EntityType
+	//	type=[StructureElement] ";";
 	public DCDeclElements getDCDeclAccess() {
 		return pDCDecl;
 	}
 	
 	public ParserRule getDCDeclRule() {
 		return getDCDeclAccess().getRule();
+	}
+
+	//Only:
+	//	only="only";
+	public OnlyElements getOnlyAccess() {
+		return pOnly;
+	}
+	
+	public ParserRule getOnlyRule() {
+		return getOnlyAccess().getRule();
+	}
+
+	//Can:
+	//	can="can-";
+	public CanElements getCanAccess() {
+		return pCan;
+	}
+	
+	public ParserRule getCanRule() {
+		return getCanAccess().getRule();
+	}
+
+	//Cannot:
+	//	cannot="cannot-";
+	public CannotElements getCannotAccess() {
+		return pCannot;
+	}
+	
+	public ParserRule getCannotRule() {
+		return getCannotAccess().getRule();
+	}
+
+	//Only2:
+	//	only2="-only";
+	public Only2Elements getOnly2Access() {
+		return pOnly2;
+	}
+	
+	public ParserRule getOnly2Rule() {
+		return getOnly2Access().getRule();
+	}
+
+	//Must:
+	//	must="must-";
+	public MustElements getMustAccess() {
+		return pMust;
+	}
+	
+	public ParserRule getMustRule() {
+		return getMustAccess().getRule();
 	}
 
 	//ElementType:

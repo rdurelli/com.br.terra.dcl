@@ -3,21 +3,58 @@ grammar com.br.terra.dcl.DCL with org.eclipse.xtext.common.Terminals
 generate dCL "http://www.br.com/terra/dcl/DCL"
 
 Model:
-	  'architeturalElements' '{' modDecl+= ModDecl* '}'
+	  'architeturalElements' '{' structureElements += StructureElement+ '}'
 	  'restrictions' '{' (dCDecl += DCDecl*) '}';
-	  
+ 
+ StructureElement: Layer | Component | SubSystem | ArchitectureView | SoftwareSystem;
+ 
+ Layer:
+ 	'layer' name=ID ';';
+ 
+ Component:
+ 	'component' name=ID ';';
+ 	
+ SubSystem:
+ 	'subSystem' name=ID ';'
+ ;
+ 
+ ArchitectureView:
+ 	'architectureView' name=ID ';'
+ ;
+ 
+ SoftwareSystem:
+ 	'softwareSystem' name=ID ';'
+ ;
+ 
+ DCDecl: (only=Only t=[StructureElement] can=Can elementType=ElementType type = [StructureElement] ';') | 
+ 	     (t=[StructureElement] cannot=Cannot elementType=ElementType type = [StructureElement] ';') |
+ 	     (t=[StructureElement] can=Can elementType=ElementType only2=Only2 type = [StructureElement] ';') |
+ 	     (t=[StructureElement] must=Must entityType=EntityType type = [StructureElement] ';');
+ 
+ Only:
+ 	only='only'
+ ;
+ 
+ Can:
+ 	can='can-'
+ ;
+ 
+ Cannot:
+ 	cannot='cannot-'
+ ;
 
- ModDecl: ('layer' name=ID ';' | 'component' name = ID ';' | 'subSystem' name = ID ';' | 'architectureView' name = ID ';' | 'softwareSystem' name = ID ';' ) ;
- 
- DCDecl: ('only' t=[ModDecl] 'can-'elementType=ElementType type = [ModDecl] ';') | 
- 	     (t=[ModDecl] 'cannot-'elementType=ElementType type = [ModDecl] ';') |
- 	     (t=[ModDecl] 'can-'elementType=ElementType'-only' type = [ModDecl] ';') |
- 	     (t=[ModDecl] 'must-'entityType=EntityType type = [ModDecl] ';');
- 
+ Only2:
+ 	only2='-only'
+ ;	
+
+  Must:
+  	must='must-'
+  ;
+
  ElementType:
          BasicType | EntityType;
    
  BasicType:
-     	typeName=('access' | 'declare' | 'handle' | 'create' | 'depend');
+     	typeName= ('access' | 'declare' | 'handle' | 'create' | 'depend');
      
 EntityType: entity=('extend' | 'implement' | 'derive' | 'throw' | 'annotated');

@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.br.terra.dcl.dCL.Model#getModDecl <em>Mod Decl</em>}</li>
+ *   <li>{@link com.br.terra.dcl.dCL.Model#getStructureElements <em>Structure Elements</em>}</li>
  *   <li>{@link com.br.terra.dcl.dCL.Model#getDCDecl <em>DC Decl</em>}</li>
  * </ul>
  * </p>
@@ -26,20 +26,20 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Mod Decl</b></em>' containment reference list.
-   * The list contents are of type {@link com.br.terra.dcl.dCL.ModDecl}.
+   * Returns the value of the '<em><b>Structure Elements</b></em>' containment reference list.
+   * The list contents are of type {@link com.br.terra.dcl.dCL.StructureElement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Mod Decl</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Structure Elements</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Mod Decl</em>' containment reference list.
-   * @see com.br.terra.dcl.dCL.DCLPackage#getModel_ModDecl()
+   * @return the value of the '<em>Structure Elements</em>' containment reference list.
+   * @see com.br.terra.dcl.dCL.DCLPackage#getModel_StructureElements()
    * @model containment="true"
    * @generated
    */
-  EList<ModDecl> getModDecl();
+  EList<StructureElement> getStructureElements();
 
   /**
    * Returns the value of the '<em><b>DC Decl</b></em>' containment reference list.

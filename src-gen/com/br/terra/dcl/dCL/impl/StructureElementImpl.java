@@ -3,7 +3,7 @@
 package com.br.terra.dcl.dCL.impl;
 
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.ModDecl;
+import com.br.terra.dcl.dCL.StructureElement;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -14,18 +14,18 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Mod Decl</b></em>'.
+ * An implementation of the model object '<em><b>Structure Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.br.terra.dcl.dCL.impl.ModDeclImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.br.terra.dcl.dCL.impl.StructureElementImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
+public class StructureElementImpl extends MinimalEObjectImpl.Container implements StructureElement
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -52,7 +52,7 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ModDeclImpl()
+  protected StructureElementImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
   @Override
   protected EClass eStaticClass()
   {
-    return DCLPackage.Literals.MOD_DECL;
+    return DCLPackage.Literals.STRUCTURE_ELEMENT;
   }
 
   /**
@@ -88,7 +88,7 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.MOD_DECL__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.STRUCTURE_ELEMENT__NAME, oldName, name));
   }
 
   /**
@@ -101,7 +101,7 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
   {
     switch (featureID)
     {
-      case DCLPackage.MOD_DECL__NAME:
+      case DCLPackage.STRUCTURE_ELEMENT__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -117,7 +117,7 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
   {
     switch (featureID)
     {
-      case DCLPackage.MOD_DECL__NAME:
+      case DCLPackage.STRUCTURE_ELEMENT__NAME:
         setName((String)newValue);
         return;
     }
@@ -134,7 +134,7 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
   {
     switch (featureID)
     {
-      case DCLPackage.MOD_DECL__NAME:
+      case DCLPackage.STRUCTURE_ELEMENT__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -151,7 +151,7 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
   {
     switch (featureID)
     {
-      case DCLPackage.MOD_DECL__NAME:
+      case DCLPackage.STRUCTURE_ELEMENT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -174,4 +174,4 @@ public class ModDeclImpl extends MinimalEObjectImpl.Container implements ModDecl
     return result.toString();
   }
 
-} //ModDeclImpl
+} //StructureElementImpl

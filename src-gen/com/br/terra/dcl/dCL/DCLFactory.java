@@ -32,13 +32,58 @@ public interface DCLFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Mod Decl</em>'.
+   * Returns a new object of class '<em>Structure Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Mod Decl</em>'.
+   * @return a new object of class '<em>Structure Element</em>'.
    * @generated
    */
-  ModDecl createModDecl();
+  StructureElement createStructureElement();
+
+  /**
+   * Returns a new object of class '<em>Layer</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Layer</em>'.
+   * @generated
+   */
+  Layer createLayer();
+
+  /**
+   * Returns a new object of class '<em>Component</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Component</em>'.
+   * @generated
+   */
+  Component createComponent();
+
+  /**
+   * Returns a new object of class '<em>Sub System</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sub System</em>'.
+   * @generated
+   */
+  SubSystem createSubSystem();
+
+  /**
+   * Returns a new object of class '<em>Architecture View</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Architecture View</em>'.
+   * @generated
+   */
+  ArchitectureView createArchitectureView();
+
+  /**
+   * Returns a new object of class '<em>Software System</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Software System</em>'.
+   * @generated
+   */
+  SoftwareSystem createSoftwareSystem();
 
   /**
    * Returns a new object of class '<em>DC Decl</em>'.
@@ -48,6 +93,51 @@ public interface DCLFactory extends EFactory
    * @generated
    */
   DCDecl createDCDecl();
+
+  /**
+   * Returns a new object of class '<em>Only</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Only</em>'.
+   * @generated
+   */
+  Only createOnly();
+
+  /**
+   * Returns a new object of class '<em>Can</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Can</em>'.
+   * @generated
+   */
+  Can createCan();
+
+  /**
+   * Returns a new object of class '<em>Cannot</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Cannot</em>'.
+   * @generated
+   */
+  Cannot createCannot();
+
+  /**
+   * Returns a new object of class '<em>Only2</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Only2</em>'.
+   * @generated
+   */
+  Only2 createOnly2();
+
+  /**
+   * Returns a new object of class '<em>Must</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Must</em>'.
+   * @generated
+   */
+  Must createMust();
 
   /**
    * Returns a new object of class '<em>Element Type</em>'.

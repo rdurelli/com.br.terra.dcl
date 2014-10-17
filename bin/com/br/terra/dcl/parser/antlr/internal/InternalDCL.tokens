@@ -1,6 +1,5 @@
 '-only'=24
 ';'=16
-'Only'=21
 'access'=26
 'annotated'=35
 'architectureView'=19
@@ -17,6 +16,7 @@
 'implement'=32
 'layer'=15
 'must-'=25
+'only'=21
 'restrictions'=14
 'softwareSystem'=20
 'subSystem'=18
