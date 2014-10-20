@@ -4,8 +4,8 @@ package com.br.terra.dcl.dCL.impl;
 
 import com.br.terra.dcl.dCL.DCDecl;
 import com.br.terra.dcl.dCL.DCLPackage;
+import com.br.terra.dcl.dCL.DCLStructureElement;
 import com.br.terra.dcl.dCL.Model;
-import com.br.terra.dcl.dCL.StructureElement;
 
 import java.util.Collection;
 
@@ -45,7 +45,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    * @ordered
    */
-  protected EList<StructureElement> structureElements;
+  protected EList<DCLStructureElement> structureElements;
 
   /**
    * The cached value of the '{@link #getDCDecl() <em>DC Decl</em>}' containment reference list.
@@ -83,11 +83,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<StructureElement> getStructureElements()
+  public EList<DCLStructureElement> getStructureElements()
   {
     if (structureElements == null)
     {
-      structureElements = new EObjectContainmentEList<StructureElement>(StructureElement.class, this, DCLPackage.MODEL__STRUCTURE_ELEMENTS);
+      structureElements = new EObjectContainmentEList<DCLStructureElement>(DCLStructureElement.class, this, DCLPackage.MODEL__STRUCTURE_ELEMENTS);
     }
     return structureElements;
   }
@@ -155,7 +155,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case DCLPackage.MODEL__STRUCTURE_ELEMENTS:
         getStructureElements().clear();
-        getStructureElements().addAll((Collection<? extends StructureElement>)newValue);
+        getStructureElements().addAll((Collection<? extends DCLStructureElement>)newValue);
         return;
       case DCLPackage.MODEL__DC_DECL:
         getDCDecl().clear();

@@ -6,12 +6,12 @@ import com.br.terra.dcl.dCL.Can;
 import com.br.terra.dcl.dCL.Cannot;
 import com.br.terra.dcl.dCL.DCDecl;
 import com.br.terra.dcl.dCL.DCLPackage;
+import com.br.terra.dcl.dCL.DCLStructureElement;
 import com.br.terra.dcl.dCL.ElementType;
 import com.br.terra.dcl.dCL.EntityType;
 import com.br.terra.dcl.dCL.Must;
 import com.br.terra.dcl.dCL.Only;
 import com.br.terra.dcl.dCL.Only2;
-import com.br.terra.dcl.dCL.StructureElement;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -63,7 +63,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * @generated
    * @ordered
    */
-  protected StructureElement t;
+  protected DCLStructureElement t;
 
   /**
    * The cached value of the '{@link #getCan() <em>Can</em>}' containment reference.
@@ -93,7 +93,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * @generated
    * @ordered
    */
-  protected StructureElement type;
+  protected DCLStructureElement type;
 
   /**
    * The cached value of the '{@link #getCannot() <em>Cannot</em>}' containment reference.
@@ -209,12 +209,12 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public StructureElement getT()
+  public DCLStructureElement getT()
   {
     if (t != null && t.eIsProxy())
     {
       InternalEObject oldT = (InternalEObject)t;
-      t = (StructureElement)eResolveProxy(oldT);
+      t = (DCLStructureElement)eResolveProxy(oldT);
       if (t != oldT)
       {
         if (eNotificationRequired())
@@ -229,7 +229,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public StructureElement basicGetT()
+  public DCLStructureElement basicGetT()
   {
     return t;
   }
@@ -239,9 +239,9 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setT(StructureElement newT)
+  public void setT(DCLStructureElement newT)
   {
-    StructureElement oldT = t;
+    DCLStructureElement oldT = t;
     t = newT;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DC_DECL__T, oldT, t));
@@ -348,12 +348,12 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public StructureElement getType()
+  public DCLStructureElement getType()
   {
     if (type != null && type.eIsProxy())
     {
       InternalEObject oldType = (InternalEObject)type;
-      type = (StructureElement)eResolveProxy(oldType);
+      type = (DCLStructureElement)eResolveProxy(oldType);
       if (type != oldType)
       {
         if (eNotificationRequired())
@@ -368,7 +368,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public StructureElement basicGetType()
+  public DCLStructureElement basicGetType()
   {
     return type;
   }
@@ -378,9 +378,9 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(StructureElement newType)
+  public void setType(DCLStructureElement newType)
   {
-    StructureElement oldType = type;
+    DCLStructureElement oldType = type;
     type = newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DC_DECL__TYPE, oldType, type));
@@ -654,7 +654,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
         setOnly((Only)newValue);
         return;
       case DCLPackage.DC_DECL__T:
-        setT((StructureElement)newValue);
+        setT((DCLStructureElement)newValue);
         return;
       case DCLPackage.DC_DECL__CAN:
         setCan((Can)newValue);
@@ -663,7 +663,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
         setElementType((ElementType)newValue);
         return;
       case DCLPackage.DC_DECL__TYPE:
-        setType((StructureElement)newValue);
+        setType((DCLStructureElement)newValue);
         return;
       case DCLPackage.DC_DECL__CANNOT:
         setCannot((Cannot)newValue);
@@ -695,7 +695,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
         setOnly((Only)null);
         return;
       case DCLPackage.DC_DECL__T:
-        setT((StructureElement)null);
+        setT((DCLStructureElement)null);
         return;
       case DCLPackage.DC_DECL__CAN:
         setCan((Can)null);
@@ -704,7 +704,7 @@ public class DCDeclImpl extends MinimalEObjectImpl.Container implements DCDecl
         setElementType((ElementType)null);
         return;
       case DCLPackage.DC_DECL__TYPE:
-        setType((StructureElement)null);
+        setType((DCLStructureElement)null);
         return;
       case DCLPackage.DC_DECL__CANNOT:
         setCannot((Cannot)null);

@@ -11,14 +11,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//Model/structureElements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//Model/dCDecl"/>
     </genClasses>
-    <genClasses ecoreClass="DCL.ecore#//StructureElement">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//StructureElement/name"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLStructureElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//DCLStructureElement/name"/>
     </genClasses>
-    <genClasses ecoreClass="DCL.ecore#//Layer"/>
-    <genClasses ecoreClass="DCL.ecore#//Component"/>
-    <genClasses ecoreClass="DCL.ecore#//SubSystem"/>
-    <genClasses ecoreClass="DCL.ecore#//ArchitectureView"/>
-    <genClasses ecoreClass="DCL.ecore#//SoftwareSystem"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLLayer"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLComponent"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLSubSystem"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLArchitectureView"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLSoftwareSystem"/>
     <genClasses ecoreClass="DCL.ecore#//DCDecl">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/only"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/t"/>

@@ -79,50 +79,50 @@ public class DCLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.STRUCTURE_ELEMENT:
+      case DCLPackage.DCL_STRUCTURE_ELEMENT:
       {
-        StructureElement structureElement = (StructureElement)theEObject;
-        T result = caseStructureElement(structureElement);
+        DCLStructureElement dclStructureElement = (DCLStructureElement)theEObject;
+        T result = caseDCLStructureElement(dclStructureElement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.LAYER:
+      case DCLPackage.DCL_LAYER:
       {
-        Layer layer = (Layer)theEObject;
-        T result = caseLayer(layer);
-        if (result == null) result = caseStructureElement(layer);
+        DCLLayer dclLayer = (DCLLayer)theEObject;
+        T result = caseDCLLayer(dclLayer);
+        if (result == null) result = caseDCLStructureElement(dclLayer);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.COMPONENT:
+      case DCLPackage.DCL_COMPONENT:
       {
-        Component component = (Component)theEObject;
-        T result = caseComponent(component);
-        if (result == null) result = caseStructureElement(component);
+        DCLComponent dclComponent = (DCLComponent)theEObject;
+        T result = caseDCLComponent(dclComponent);
+        if (result == null) result = caseDCLStructureElement(dclComponent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.SUB_SYSTEM:
+      case DCLPackage.DCL_SUB_SYSTEM:
       {
-        SubSystem subSystem = (SubSystem)theEObject;
-        T result = caseSubSystem(subSystem);
-        if (result == null) result = caseStructureElement(subSystem);
+        DCLSubSystem dclSubSystem = (DCLSubSystem)theEObject;
+        T result = caseDCLSubSystem(dclSubSystem);
+        if (result == null) result = caseDCLStructureElement(dclSubSystem);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.ARCHITECTURE_VIEW:
+      case DCLPackage.DCL_ARCHITECTURE_VIEW:
       {
-        ArchitectureView architectureView = (ArchitectureView)theEObject;
-        T result = caseArchitectureView(architectureView);
-        if (result == null) result = caseStructureElement(architectureView);
+        DCLArchitectureView dclArchitectureView = (DCLArchitectureView)theEObject;
+        T result = caseDCLArchitectureView(dclArchitectureView);
+        if (result == null) result = caseDCLStructureElement(dclArchitectureView);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.SOFTWARE_SYSTEM:
+      case DCLPackage.DCL_SOFTWARE_SYSTEM:
       {
-        SoftwareSystem softwareSystem = (SoftwareSystem)theEObject;
-        T result = caseSoftwareSystem(softwareSystem);
-        if (result == null) result = caseStructureElement(softwareSystem);
+        DCLSoftwareSystem dclSoftwareSystem = (DCLSoftwareSystem)theEObject;
+        T result = caseDCLSoftwareSystem(dclSoftwareSystem);
+        if (result == null) result = caseDCLStructureElement(dclSoftwareSystem);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -222,7 +222,7 @@ public class DCLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseStructureElement(StructureElement object)
+  public T caseDCLStructureElement(DCLStructureElement object)
   {
     return null;
   }
@@ -238,7 +238,7 @@ public class DCLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseLayer(Layer object)
+  public T caseDCLLayer(DCLLayer object)
   {
     return null;
   }
@@ -254,7 +254,7 @@ public class DCLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseComponent(Component object)
+  public T caseDCLComponent(DCLComponent object)
   {
     return null;
   }
@@ -270,7 +270,7 @@ public class DCLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubSystem(SubSystem object)
+  public T caseDCLSubSystem(DCLSubSystem object)
   {
     return null;
   }
@@ -286,7 +286,7 @@ public class DCLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseArchitectureView(ArchitectureView object)
+  public T caseDCLArchitectureView(DCLArchitectureView object)
   {
     return null;
   }
@@ -302,7 +302,7 @@ public class DCLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSoftwareSystem(SoftwareSystem object)
+  public T caseDCLSoftwareSystem(DCLSoftwareSystem object)
   {
     return null;
   }

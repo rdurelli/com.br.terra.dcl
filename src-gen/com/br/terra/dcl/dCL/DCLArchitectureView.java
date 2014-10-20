@@ -9,10 +9,10 @@ package com.br.terra.dcl.dCL;
  * <!-- end-user-doc -->
  *
  *
- * @see com.br.terra.dcl.dCL.DCLPackage#getArchitectureView()
+ * @see com.br.terra.dcl.dCL.DCLPackage#getDCLArchitectureView()
  * @model
  * @generated
  */
-public interface ArchitectureView extends StructureElement
+public interface DCLArchitectureView extends DCLStructureElement
 {
-} // ArchitectureView
+} // DCLArchitectureView

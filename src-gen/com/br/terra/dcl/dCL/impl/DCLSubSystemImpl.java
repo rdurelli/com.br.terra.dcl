@@ -3,7 +3,7 @@
 package com.br.terra.dcl.dCL.impl;
 
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.SubSystem;
+import com.br.terra.dcl.dCL.DCLSubSystem;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -16,14 +16,14 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class SubSystemImpl extends StructureElementImpl implements SubSystem
+public class DCLSubSystemImpl extends DCLStructureElementImpl implements DCLSubSystem
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SubSystemImpl()
+  protected DCLSubSystemImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class SubSystemImpl extends StructureElementImpl implements SubSystem
   @Override
   protected EClass eStaticClass()
   {
-    return DCLPackage.Literals.SUB_SYSTEM;
+    return DCLPackage.Literals.DCL_SUB_SYSTEM;
   }
 
-} //SubSystemImpl
+} //DCLSubSystemImpl

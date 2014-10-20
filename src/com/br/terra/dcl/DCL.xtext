@@ -3,33 +3,33 @@ grammar com.br.terra.dcl.DCL with org.eclipse.xtext.common.Terminals
 generate dCL "http://www.br.com/terra/dcl/DCL"
 
 Model:
-	  'architeturalElements' '{' structureElements += StructureElement+ '}'
+	  'architeturalElements' '{' structureElements += DCLStructureElement+ '}'
 	  'restrictions' '{' (dCDecl += DCDecl*) '}';
  
- StructureElement: Layer | Component | SubSystem | ArchitectureView | SoftwareSystem;
+ DCLStructureElement: DCLLayer | DCLComponent | DCLSubSystem | DCLArchitectureView | DCLSoftwareSystem;
  
- Layer:
+ DCLLayer:
  	'layer' name=ID ';';
  
- Component:
+ DCLComponent:
  	'component' name=ID ';';
  	
- SubSystem:
+ DCLSubSystem:
  	'subSystem' name=ID ';'
  ;
  
- ArchitectureView:
+ DCLArchitectureView:
  	'architectureView' name=ID ';'
  ;
  
- SoftwareSystem:
+ DCLSoftwareSystem:
  	'softwareSystem' name=ID ';'
  ;
  
- DCDecl: (only=Only t=[StructureElement] can=Can elementType=ElementType type = [StructureElement] ';') | 
- 	     (t=[StructureElement] cannot=Cannot elementType=ElementType type = [StructureElement] ';') |
- 	     (t=[StructureElement] can=Can elementType=ElementType only2=Only2 type = [StructureElement] ';') |
- 	     (t=[StructureElement] must=Must entityType=EntityType type = [StructureElement] ';');
+ DCDecl: (only=Only t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') | 
+ 	     (t=[DCLStructureElement] cannot=Cannot elementType=ElementType type = [DCLStructureElement] ';') |
+ 	     (t=[DCLStructureElement] can=Can elementType=ElementType only2=Only2 type = [DCLStructureElement] ';') |
+ 	     (t=[DCLStructureElement] must=Must entityType=EntityType type = [DCLStructureElement] ';');
  
  Only:
  	only='only'

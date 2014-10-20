@@ -94,14 +94,14 @@ public interface DCLPackage extends EPackage
   int MODEL_FEATURE_COUNT = 2;
 
   /**
-   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.StructureElementImpl <em>Structure Element</em>}' class.
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLStructureElementImpl <em>Structure Element</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.br.terra.dcl.dCL.impl.StructureElementImpl
-   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getStructureElement()
+   * @see com.br.terra.dcl.dCL.impl.DCLStructureElementImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLStructureElement()
    * @generated
    */
-  int STRUCTURE_ELEMENT = 1;
+  int DCL_STRUCTURE_ELEMENT = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -110,7 +110,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRUCTURE_ELEMENT__NAME = 0;
+  int DCL_STRUCTURE_ELEMENT__NAME = 0;
 
   /**
    * The number of structural features of the '<em>Structure Element</em>' class.
@@ -119,17 +119,17 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int STRUCTURE_ELEMENT_FEATURE_COUNT = 1;
+  int DCL_STRUCTURE_ELEMENT_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.LayerImpl <em>Layer</em>}' class.
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl <em>Layer</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.br.terra.dcl.dCL.impl.LayerImpl
-   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getLayer()
+   * @see com.br.terra.dcl.dCL.impl.DCLLayerImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLLayer()
    * @generated
    */
-  int LAYER = 2;
+  int DCL_LAYER = 2;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -138,7 +138,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LAYER__NAME = STRUCTURE_ELEMENT__NAME;
+  int DCL_LAYER__NAME = DCL_STRUCTURE_ELEMENT__NAME;
 
   /**
    * The number of structural features of the '<em>Layer</em>' class.
@@ -147,17 +147,17 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int LAYER_FEATURE_COUNT = STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+  int DCL_LAYER_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.ComponentImpl <em>Component</em>}' class.
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLComponentImpl <em>Component</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.br.terra.dcl.dCL.impl.ComponentImpl
-   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getComponent()
+   * @see com.br.terra.dcl.dCL.impl.DCLComponentImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLComponent()
    * @generated
    */
-  int COMPONENT = 3;
+  int DCL_COMPONENT = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -166,7 +166,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT__NAME = STRUCTURE_ELEMENT__NAME;
+  int DCL_COMPONENT__NAME = DCL_STRUCTURE_ELEMENT__NAME;
 
   /**
    * The number of structural features of the '<em>Component</em>' class.
@@ -175,17 +175,17 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int COMPONENT_FEATURE_COUNT = STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+  int DCL_COMPONENT_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.SubSystemImpl <em>Sub System</em>}' class.
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLSubSystemImpl <em>Sub System</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.br.terra.dcl.dCL.impl.SubSystemImpl
-   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getSubSystem()
+   * @see com.br.terra.dcl.dCL.impl.DCLSubSystemImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLSubSystem()
    * @generated
    */
-  int SUB_SYSTEM = 4;
+  int DCL_SUB_SYSTEM = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -194,7 +194,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SUB_SYSTEM__NAME = STRUCTURE_ELEMENT__NAME;
+  int DCL_SUB_SYSTEM__NAME = DCL_STRUCTURE_ELEMENT__NAME;
 
   /**
    * The number of structural features of the '<em>Sub System</em>' class.
@@ -203,17 +203,17 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SUB_SYSTEM_FEATURE_COUNT = STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+  int DCL_SUB_SYSTEM_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.ArchitectureViewImpl <em>Architecture View</em>}' class.
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLArchitectureViewImpl <em>Architecture View</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.br.terra.dcl.dCL.impl.ArchitectureViewImpl
-   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getArchitectureView()
+   * @see com.br.terra.dcl.dCL.impl.DCLArchitectureViewImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLArchitectureView()
    * @generated
    */
-  int ARCHITECTURE_VIEW = 5;
+  int DCL_ARCHITECTURE_VIEW = 5;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -222,7 +222,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARCHITECTURE_VIEW__NAME = STRUCTURE_ELEMENT__NAME;
+  int DCL_ARCHITECTURE_VIEW__NAME = DCL_STRUCTURE_ELEMENT__NAME;
 
   /**
    * The number of structural features of the '<em>Architecture View</em>' class.
@@ -231,17 +231,17 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ARCHITECTURE_VIEW_FEATURE_COUNT = STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+  int DCL_ARCHITECTURE_VIEW_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.SoftwareSystemImpl <em>Software System</em>}' class.
+   * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLSoftwareSystemImpl <em>Software System</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see com.br.terra.dcl.dCL.impl.SoftwareSystemImpl
-   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getSoftwareSystem()
+   * @see com.br.terra.dcl.dCL.impl.DCLSoftwareSystemImpl
+   * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLSoftwareSystem()
    * @generated
    */
-  int SOFTWARE_SYSTEM = 6;
+  int DCL_SOFTWARE_SYSTEM = 6;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -250,7 +250,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SOFTWARE_SYSTEM__NAME = STRUCTURE_ELEMENT__NAME;
+  int DCL_SOFTWARE_SYSTEM__NAME = DCL_STRUCTURE_ELEMENT__NAME;
 
   /**
    * The number of structural features of the '<em>Software System</em>' class.
@@ -259,7 +259,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SOFTWARE_SYSTEM_FEATURE_COUNT = STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+  int DCL_SOFTWARE_SYSTEM_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCDeclImpl <em>DC Decl</em>}' class.
@@ -610,75 +610,75 @@ public interface DCLPackage extends EPackage
   EReference getModel_DCDecl();
 
   /**
-   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.StructureElement <em>Structure Element</em>}'.
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLStructureElement <em>Structure Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for class '<em>Structure Element</em>'.
-   * @see com.br.terra.dcl.dCL.StructureElement
+   * @see com.br.terra.dcl.dCL.DCLStructureElement
    * @generated
    */
-  EClass getStructureElement();
+  EClass getDCLStructureElement();
 
   /**
-   * Returns the meta object for the attribute '{@link com.br.terra.dcl.dCL.StructureElement#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link com.br.terra.dcl.dCL.DCLStructureElement#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see com.br.terra.dcl.dCL.StructureElement#getName()
-   * @see #getStructureElement()
+   * @see com.br.terra.dcl.dCL.DCLStructureElement#getName()
+   * @see #getDCLStructureElement()
    * @generated
    */
-  EAttribute getStructureElement_Name();
+  EAttribute getDCLStructureElement_Name();
 
   /**
-   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.Layer <em>Layer</em>}'.
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLLayer <em>Layer</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for class '<em>Layer</em>'.
-   * @see com.br.terra.dcl.dCL.Layer
+   * @see com.br.terra.dcl.dCL.DCLLayer
    * @generated
    */
-  EClass getLayer();
+  EClass getDCLLayer();
 
   /**
-   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.Component <em>Component</em>}'.
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLComponent <em>Component</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for class '<em>Component</em>'.
-   * @see com.br.terra.dcl.dCL.Component
+   * @see com.br.terra.dcl.dCL.DCLComponent
    * @generated
    */
-  EClass getComponent();
+  EClass getDCLComponent();
 
   /**
-   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.SubSystem <em>Sub System</em>}'.
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLSubSystem <em>Sub System</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for class '<em>Sub System</em>'.
-   * @see com.br.terra.dcl.dCL.SubSystem
+   * @see com.br.terra.dcl.dCL.DCLSubSystem
    * @generated
    */
-  EClass getSubSystem();
+  EClass getDCLSubSystem();
 
   /**
-   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.ArchitectureView <em>Architecture View</em>}'.
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLArchitectureView <em>Architecture View</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for class '<em>Architecture View</em>'.
-   * @see com.br.terra.dcl.dCL.ArchitectureView
+   * @see com.br.terra.dcl.dCL.DCLArchitectureView
    * @generated
    */
-  EClass getArchitectureView();
+  EClass getDCLArchitectureView();
 
   /**
-   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.SoftwareSystem <em>Software System</em>}'.
+   * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLSoftwareSystem <em>Software System</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for class '<em>Software System</em>'.
-   * @see com.br.terra.dcl.dCL.SoftwareSystem
+   * @see com.br.terra.dcl.dCL.DCLSoftwareSystem
    * @generated
    */
-  EClass getSoftwareSystem();
+  EClass getDCLSoftwareSystem();
 
   /**
    * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCDecl <em>DC Decl</em>}'.
@@ -996,14 +996,14 @@ public interface DCLPackage extends EPackage
     EReference MODEL__DC_DECL = eINSTANCE.getModel_DCDecl();
 
     /**
-     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.StructureElementImpl <em>Structure Element</em>}' class.
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLStructureElementImpl <em>Structure Element</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.br.terra.dcl.dCL.impl.StructureElementImpl
-     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getStructureElement()
+     * @see com.br.terra.dcl.dCL.impl.DCLStructureElementImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLStructureElement()
      * @generated
      */
-    EClass STRUCTURE_ELEMENT = eINSTANCE.getStructureElement();
+    EClass DCL_STRUCTURE_ELEMENT = eINSTANCE.getDCLStructureElement();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1011,57 +1011,57 @@ public interface DCLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STRUCTURE_ELEMENT__NAME = eINSTANCE.getStructureElement_Name();
+    EAttribute DCL_STRUCTURE_ELEMENT__NAME = eINSTANCE.getDCLStructureElement_Name();
 
     /**
-     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.LayerImpl <em>Layer</em>}' class.
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLLayerImpl <em>Layer</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.br.terra.dcl.dCL.impl.LayerImpl
-     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getLayer()
+     * @see com.br.terra.dcl.dCL.impl.DCLLayerImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLLayer()
      * @generated
      */
-    EClass LAYER = eINSTANCE.getLayer();
+    EClass DCL_LAYER = eINSTANCE.getDCLLayer();
 
     /**
-     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.ComponentImpl <em>Component</em>}' class.
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLComponentImpl <em>Component</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.br.terra.dcl.dCL.impl.ComponentImpl
-     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getComponent()
+     * @see com.br.terra.dcl.dCL.impl.DCLComponentImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLComponent()
      * @generated
      */
-    EClass COMPONENT = eINSTANCE.getComponent();
+    EClass DCL_COMPONENT = eINSTANCE.getDCLComponent();
 
     /**
-     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.SubSystemImpl <em>Sub System</em>}' class.
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLSubSystemImpl <em>Sub System</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.br.terra.dcl.dCL.impl.SubSystemImpl
-     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getSubSystem()
+     * @see com.br.terra.dcl.dCL.impl.DCLSubSystemImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLSubSystem()
      * @generated
      */
-    EClass SUB_SYSTEM = eINSTANCE.getSubSystem();
+    EClass DCL_SUB_SYSTEM = eINSTANCE.getDCLSubSystem();
 
     /**
-     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.ArchitectureViewImpl <em>Architecture View</em>}' class.
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLArchitectureViewImpl <em>Architecture View</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.br.terra.dcl.dCL.impl.ArchitectureViewImpl
-     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getArchitectureView()
+     * @see com.br.terra.dcl.dCL.impl.DCLArchitectureViewImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLArchitectureView()
      * @generated
      */
-    EClass ARCHITECTURE_VIEW = eINSTANCE.getArchitectureView();
+    EClass DCL_ARCHITECTURE_VIEW = eINSTANCE.getDCLArchitectureView();
 
     /**
-     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.SoftwareSystemImpl <em>Software System</em>}' class.
+     * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLSoftwareSystemImpl <em>Software System</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see com.br.terra.dcl.dCL.impl.SoftwareSystemImpl
-     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getSoftwareSystem()
+     * @see com.br.terra.dcl.dCL.impl.DCLSoftwareSystemImpl
+     * @see com.br.terra.dcl.dCL.impl.DCLPackageImpl#getDCLSoftwareSystem()
      * @generated
      */
-    EClass SOFTWARE_SYSTEM = eINSTANCE.getSoftwareSystem();
+    EClass DCL_SOFTWARE_SYSTEM = eINSTANCE.getDCLSoftwareSystem();
 
     /**
      * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCDeclImpl <em>DC Decl</em>}' class.

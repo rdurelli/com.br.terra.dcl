@@ -65,12 +65,12 @@ public interface DCDecl extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>T</em>' reference.
-   * @see #setT(StructureElement)
+   * @see #setT(DCLStructureElement)
    * @see com.br.terra.dcl.dCL.DCLPackage#getDCDecl_T()
    * @model
    * @generated
    */
-  StructureElement getT();
+  DCLStructureElement getT();
 
   /**
    * Sets the value of the '{@link com.br.terra.dcl.dCL.DCDecl#getT <em>T</em>}' reference.
@@ -80,7 +80,7 @@ public interface DCDecl extends EObject
    * @see #getT()
    * @generated
    */
-  void setT(StructureElement value);
+  void setT(DCLStructureElement value);
 
   /**
    * Returns the value of the '<em><b>Can</b></em>' containment reference.
@@ -143,12 +143,12 @@ public interface DCDecl extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type</em>' reference.
-   * @see #setType(StructureElement)
+   * @see #setType(DCLStructureElement)
    * @see com.br.terra.dcl.dCL.DCLPackage#getDCDecl_Type()
    * @model
    * @generated
    */
-  StructureElement getType();
+  DCLStructureElement getType();
 
   /**
    * Sets the value of the '{@link com.br.terra.dcl.dCL.DCDecl#getType <em>Type</em>}' reference.
@@ -158,7 +158,7 @@ public interface DCDecl extends EObject
    * @see #getType()
    * @generated
    */
-  void setType(StructureElement value);
+  void setType(DCLStructureElement value);
 
   /**
    * Returns the value of the '<em><b>Cannot</b></em>' containment reference.

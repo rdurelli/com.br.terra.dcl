@@ -27,7 +27,7 @@ public interface Model extends EObject
 {
   /**
    * Returns the value of the '<em><b>Structure Elements</b></em>' containment reference list.
-   * The list contents are of type {@link com.br.terra.dcl.dCL.StructureElement}.
+   * The list contents are of type {@link com.br.terra.dcl.dCL.DCLStructureElement}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Structure Elements</em>' containment reference list isn't clear,
@@ -39,7 +39,7 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<StructureElement> getStructureElements();
+  EList<DCLStructureElement> getStructureElements();
 
   /**
    * Returns the value of the '<em><b>DC Decl</b></em>' containment reference list.

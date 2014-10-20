@@ -38,7 +38,7 @@ public interface DCLFactory extends EFactory
    * @return a new object of class '<em>Structure Element</em>'.
    * @generated
    */
-  StructureElement createStructureElement();
+  DCLStructureElement createDCLStructureElement();
 
   /**
    * Returns a new object of class '<em>Layer</em>'.
@@ -47,7 +47,7 @@ public interface DCLFactory extends EFactory
    * @return a new object of class '<em>Layer</em>'.
    * @generated
    */
-  Layer createLayer();
+  DCLLayer createDCLLayer();
 
   /**
    * Returns a new object of class '<em>Component</em>'.
@@ -56,7 +56,7 @@ public interface DCLFactory extends EFactory
    * @return a new object of class '<em>Component</em>'.
    * @generated
    */
-  Component createComponent();
+  DCLComponent createDCLComponent();
 
   /**
    * Returns a new object of class '<em>Sub System</em>'.
@@ -65,7 +65,7 @@ public interface DCLFactory extends EFactory
    * @return a new object of class '<em>Sub System</em>'.
    * @generated
    */
-  SubSystem createSubSystem();
+  DCLSubSystem createDCLSubSystem();
 
   /**
    * Returns a new object of class '<em>Architecture View</em>'.
@@ -74,7 +74,7 @@ public interface DCLFactory extends EFactory
    * @return a new object of class '<em>Architecture View</em>'.
    * @generated
    */
-  ArchitectureView createArchitectureView();
+  DCLArchitectureView createDCLArchitectureView();
 
   /**
    * Returns a new object of class '<em>Software System</em>'.
@@ -83,7 +83,7 @@ public interface DCLFactory extends EFactory
    * @return a new object of class '<em>Software System</em>'.
    * @generated
    */
-  SoftwareSystem createSoftwareSystem();
+  DCLSoftwareSystem createDCLSoftwareSystem();
 
   /**
    * Returns a new object of class '<em>DC Decl</em>'.

@@ -3,7 +3,7 @@
 package com.br.terra.dcl.dCL.impl;
 
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.StructureElement;
+import com.br.terra.dcl.dCL.DCLStructureElement;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -19,13 +19,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.br.terra.dcl.dCL.impl.StructureElementImpl#getName <em>Name</em>}</li>
+ *   <li>{@link com.br.terra.dcl.dCL.impl.DCLStructureElementImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class StructureElementImpl extends MinimalEObjectImpl.Container implements StructureElement
+public class DCLStructureElementImpl extends MinimalEObjectImpl.Container implements DCLStructureElement
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -52,7 +52,7 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  protected StructureElementImpl()
+  protected DCLStructureElementImpl()
   {
     super();
   }
@@ -65,7 +65,7 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-    return DCLPackage.Literals.STRUCTURE_ELEMENT;
+    return DCLPackage.Literals.DCL_STRUCTURE_ELEMENT;
   }
 
   /**
@@ -88,7 +88,7 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.STRUCTURE_ELEMENT__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, DCLPackage.DCL_STRUCTURE_ELEMENT__NAME, oldName, name));
   }
 
   /**
@@ -101,7 +101,7 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case DCLPackage.STRUCTURE_ELEMENT__NAME:
+      case DCLPackage.DCL_STRUCTURE_ELEMENT__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -117,7 +117,7 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case DCLPackage.STRUCTURE_ELEMENT__NAME:
+      case DCLPackage.DCL_STRUCTURE_ELEMENT__NAME:
         setName((String)newValue);
         return;
     }
@@ -134,7 +134,7 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case DCLPackage.STRUCTURE_ELEMENT__NAME:
+      case DCLPackage.DCL_STRUCTURE_ELEMENT__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -151,7 +151,7 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case DCLPackage.STRUCTURE_ELEMENT__NAME:
+      case DCLPackage.DCL_STRUCTURE_ELEMENT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -174,4 +174,4 @@ public class StructureElementImpl extends MinimalEObjectImpl.Container implement
     return result.toString();
   }
 
-} //StructureElementImpl
+} //DCLStructureElementImpl

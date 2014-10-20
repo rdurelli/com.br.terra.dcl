@@ -3,25 +3,25 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dCL" nsURI="http://www.br.com/terra/dcl/DCL" nsPrefix="dCL">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
     <eStructuralFeatures xsi:type="ecore:EReference" name="structureElements" upperBound="-1"
-        eType="#//StructureElement" containment="true"/>
+        eType="#//DCLStructureElement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dCDecl" upperBound="-1"
         eType="#//DCDecl" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StructureElement">
+  <eClassifiers xsi:type="ecore:EClass" name="DCLStructureElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Layer" eSuperTypes="#//StructureElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Component" eSuperTypes="#//StructureElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SubSystem" eSuperTypes="#//StructureElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ArchitectureView" eSuperTypes="#//StructureElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SoftwareSystem" eSuperTypes="#//StructureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLLayer" eSuperTypes="#//DCLStructureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLComponent" eSuperTypes="#//DCLStructureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLSubSystem" eSuperTypes="#//DCLStructureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLArchitectureView" eSuperTypes="#//DCLStructureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLSoftwareSystem" eSuperTypes="#//DCLStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="DCDecl">
     <eStructuralFeatures xsi:type="ecore:EReference" name="only" eType="#//Only" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//StructureElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//DCLStructureElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="can" eType="#//Can" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elementType" eType="#//ElementType"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//StructureElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//DCLStructureElement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="cannot" eType="#//Cannot"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="only2" eType="#//Only2"

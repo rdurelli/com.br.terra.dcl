@@ -9,10 +9,10 @@ package com.br.terra.dcl.dCL;
  * <!-- end-user-doc -->
  *
  *
- * @see com.br.terra.dcl.dCL.DCLPackage#getComponent()
+ * @see com.br.terra.dcl.dCL.DCLPackage#getDCLComponent()
  * @model
  * @generated
  */
-public interface Component extends StructureElement
+public interface DCLComponent extends DCLStructureElement
 {
-} // Component
+} // DCLComponent

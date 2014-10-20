@@ -2,28 +2,28 @@
  */
 package com.br.terra.dcl.dCL.impl;
 
+import com.br.terra.dcl.dCL.DCLComponent;
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.Layer;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Layer</b></em>'.
+ * An implementation of the model object '<em><b>Component</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class LayerImpl extends StructureElementImpl implements Layer
+public class DCLComponentImpl extends DCLStructureElementImpl implements DCLComponent
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected LayerImpl()
+  protected DCLComponentImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class LayerImpl extends StructureElementImpl implements Layer
   @Override
   protected EClass eStaticClass()
   {
-    return DCLPackage.Literals.LAYER;
+    return DCLPackage.Literals.DCL_COMPONENT;
   }
 
-} //LayerImpl
+} //DCLComponentImpl

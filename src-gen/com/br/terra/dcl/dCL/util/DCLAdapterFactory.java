@@ -80,34 +80,34 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseStructureElement(StructureElement object)
+      public Adapter caseDCLStructureElement(DCLStructureElement object)
       {
-        return createStructureElementAdapter();
+        return createDCLStructureElementAdapter();
       }
       @Override
-      public Adapter caseLayer(Layer object)
+      public Adapter caseDCLLayer(DCLLayer object)
       {
-        return createLayerAdapter();
+        return createDCLLayerAdapter();
       }
       @Override
-      public Adapter caseComponent(Component object)
+      public Adapter caseDCLComponent(DCLComponent object)
       {
-        return createComponentAdapter();
+        return createDCLComponentAdapter();
       }
       @Override
-      public Adapter caseSubSystem(SubSystem object)
+      public Adapter caseDCLSubSystem(DCLSubSystem object)
       {
-        return createSubSystemAdapter();
+        return createDCLSubSystemAdapter();
       }
       @Override
-      public Adapter caseArchitectureView(ArchitectureView object)
+      public Adapter caseDCLArchitectureView(DCLArchitectureView object)
       {
-        return createArchitectureViewAdapter();
+        return createDCLArchitectureViewAdapter();
       }
       @Override
-      public Adapter caseSoftwareSystem(SoftwareSystem object)
+      public Adapter caseDCLSoftwareSystem(DCLSoftwareSystem object)
       {
-        return createSoftwareSystemAdapter();
+        return createDCLSoftwareSystemAdapter();
       }
       @Override
       public Adapter caseDCDecl(DCDecl object)
@@ -192,91 +192,91 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.StructureElement <em>Structure Element</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLStructureElement <em>Structure Element</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.StructureElement
+   * @see com.br.terra.dcl.dCL.DCLStructureElement
    * @generated
    */
-  public Adapter createStructureElementAdapter()
+  public Adapter createDCLStructureElementAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Layer <em>Layer</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLLayer <em>Layer</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.Layer
+   * @see com.br.terra.dcl.dCL.DCLLayer
    * @generated
    */
-  public Adapter createLayerAdapter()
+  public Adapter createDCLLayerAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.Component <em>Component</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLComponent <em>Component</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.Component
+   * @see com.br.terra.dcl.dCL.DCLComponent
    * @generated
    */
-  public Adapter createComponentAdapter()
+  public Adapter createDCLComponentAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.SubSystem <em>Sub System</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLSubSystem <em>Sub System</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.SubSystem
+   * @see com.br.terra.dcl.dCL.DCLSubSystem
    * @generated
    */
-  public Adapter createSubSystemAdapter()
+  public Adapter createDCLSubSystemAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.ArchitectureView <em>Architecture View</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLArchitectureView <em>Architecture View</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.ArchitectureView
+   * @see com.br.terra.dcl.dCL.DCLArchitectureView
    * @generated
    */
-  public Adapter createArchitectureViewAdapter()
+  public Adapter createDCLArchitectureViewAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.SoftwareSystem <em>Software System</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLSoftwareSystem <em>Software System</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.SoftwareSystem
+   * @see com.br.terra.dcl.dCL.DCLSoftwareSystem
    * @generated
    */
-  public Adapter createSoftwareSystemAdapter()
+  public Adapter createDCLSoftwareSystemAdapter()
   {
     return null;
   }

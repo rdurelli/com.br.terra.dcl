@@ -9,10 +9,10 @@ package com.br.terra.dcl.dCL;
  * <!-- end-user-doc -->
  *
  *
- * @see com.br.terra.dcl.dCL.DCLPackage#getLayer()
+ * @see com.br.terra.dcl.dCL.DCLPackage#getDCLLayer()
  * @model
  * @generated
  */
-public interface Layer extends StructureElement
+public interface DCLLayer extends DCLStructureElement
 {
-} // Layer
+} // DCLLayer

@@ -132,7 +132,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleModel"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:76:1: ruleModel returns [EObject current=null] : (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) ;
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:76:1: ruleModel returns [EObject current=null] : (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
@@ -150,11 +150,11 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:79:28: ( (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:79:28: ( (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' ) )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:3: otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}'
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:1: (otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}' )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:80:3: otherlv_0= 'architeturalElements' otherlv_1= '{' ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+ otherlv_3= '}' otherlv_4= 'restrictions' otherlv_5= '{' ( (lv_dCDecl_6_0= ruleDCDecl ) )* otherlv_7= '}'
             {
             otherlv_0=(Token)match(input,11,FOLLOW_11_in_ruleModel122); 
 
@@ -164,7 +164,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_1, grammarAccess.getModelAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:88:1: ( (lv_structureElements_2_0= ruleStructureElement ) )+
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:88:1: ( (lv_structureElements_2_0= ruleDCLStructureElement ) )+
             int cnt1=0;
             loop1:
             do {
@@ -178,16 +178,16 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:89:1: (lv_structureElements_2_0= ruleStructureElement )
+            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:89:1: (lv_structureElements_2_0= ruleDCLStructureElement )
             	    {
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:89:1: (lv_structureElements_2_0= ruleStructureElement )
-            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:90:3: lv_structureElements_2_0= ruleStructureElement
+            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:89:1: (lv_structureElements_2_0= ruleDCLStructureElement )
+            	    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:90:3: lv_structureElements_2_0= ruleDCLStructureElement
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getModelAccess().getStructureElementsStructureElementParserRuleCall_2_0()); 
+            	    	        newCompositeNode(grammarAccess.getModelAccess().getStructureElementsDCLStructureElementParserRuleCall_2_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleStructureElement_in_ruleModel155);
-            	    lv_structureElements_2_0=ruleStructureElement();
+            	    pushFollow(FOLLOW_ruleDCLStructureElement_in_ruleModel155);
+            	    lv_structureElements_2_0=ruleDCLStructureElement();
 
             	    state._fsp--;
 
@@ -199,7 +199,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             	           			current, 
             	           			"structureElements",
             	            		lv_structureElements_2_0, 
-            	            		"StructureElement");
+            	            		"DCLStructureElement");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -303,26 +303,26 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start "entryRuleStructureElement"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:148:1: entryRuleStructureElement returns [EObject current=null] : iv_ruleStructureElement= ruleStructureElement EOF ;
-    public final EObject entryRuleStructureElement() throws RecognitionException {
+    // $ANTLR start "entryRuleDCLStructureElement"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:148:1: entryRuleDCLStructureElement returns [EObject current=null] : iv_ruleDCLStructureElement= ruleDCLStructureElement EOF ;
+    public final EObject entryRuleDCLStructureElement() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleStructureElement = null;
+        EObject iv_ruleDCLStructureElement = null;
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:149:2: (iv_ruleStructureElement= ruleStructureElement EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:150:2: iv_ruleStructureElement= ruleStructureElement EOF
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:149:2: (iv_ruleDCLStructureElement= ruleDCLStructureElement EOF )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:150:2: iv_ruleDCLStructureElement= ruleDCLStructureElement EOF
             {
-             newCompositeNode(grammarAccess.getStructureElementRule()); 
-            pushFollow(FOLLOW_ruleStructureElement_in_entryRuleStructureElement262);
-            iv_ruleStructureElement=ruleStructureElement();
+             newCompositeNode(grammarAccess.getDCLStructureElementRule()); 
+            pushFollow(FOLLOW_ruleDCLStructureElement_in_entryRuleDCLStructureElement262);
+            iv_ruleDCLStructureElement=ruleDCLStructureElement();
 
             state._fsp--;
 
-             current =iv_ruleStructureElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleStructureElement272); 
+             current =iv_ruleDCLStructureElement; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLStructureElement272); 
 
             }
 
@@ -336,32 +336,32 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleStructureElement"
+    // $ANTLR end "entryRuleDCLStructureElement"
 
 
-    // $ANTLR start "ruleStructureElement"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:157:1: ruleStructureElement returns [EObject current=null] : (this_Layer_0= ruleLayer | this_Component_1= ruleComponent | this_SubSystem_2= ruleSubSystem | this_ArchitectureView_3= ruleArchitectureView | this_SoftwareSystem_4= ruleSoftwareSystem ) ;
-    public final EObject ruleStructureElement() throws RecognitionException {
+    // $ANTLR start "ruleDCLStructureElement"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:157:1: ruleDCLStructureElement returns [EObject current=null] : (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLArchitectureView_3= ruleDCLArchitectureView | this_DCLSoftwareSystem_4= ruleDCLSoftwareSystem ) ;
+    public final EObject ruleDCLStructureElement() throws RecognitionException {
         EObject current = null;
 
-        EObject this_Layer_0 = null;
+        EObject this_DCLLayer_0 = null;
 
-        EObject this_Component_1 = null;
+        EObject this_DCLComponent_1 = null;
 
-        EObject this_SubSystem_2 = null;
+        EObject this_DCLSubSystem_2 = null;
 
-        EObject this_ArchitectureView_3 = null;
+        EObject this_DCLArchitectureView_3 = null;
 
-        EObject this_SoftwareSystem_4 = null;
+        EObject this_DCLSoftwareSystem_4 = null;
 
 
          enterRule(); 
             
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:160:28: ( (this_Layer_0= ruleLayer | this_Component_1= ruleComponent | this_SubSystem_2= ruleSubSystem | this_ArchitectureView_3= ruleArchitectureView | this_SoftwareSystem_4= ruleSoftwareSystem ) )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:161:1: (this_Layer_0= ruleLayer | this_Component_1= ruleComponent | this_SubSystem_2= ruleSubSystem | this_ArchitectureView_3= ruleArchitectureView | this_SoftwareSystem_4= ruleSoftwareSystem )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:160:28: ( (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLArchitectureView_3= ruleDCLArchitectureView | this_DCLSoftwareSystem_4= ruleDCLSoftwareSystem ) )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:161:1: (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLArchitectureView_3= ruleDCLArchitectureView | this_DCLSoftwareSystem_4= ruleDCLSoftwareSystem )
             {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:161:1: (this_Layer_0= ruleLayer | this_Component_1= ruleComponent | this_SubSystem_2= ruleSubSystem | this_ArchitectureView_3= ruleArchitectureView | this_SoftwareSystem_4= ruleSoftwareSystem )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:161:1: (this_DCLLayer_0= ruleDCLLayer | this_DCLComponent_1= ruleDCLComponent | this_DCLSubSystem_2= ruleDCLSubSystem | this_DCLArchitectureView_3= ruleDCLArchitectureView | this_DCLSoftwareSystem_4= ruleDCLSoftwareSystem )
             int alt3=5;
             switch ( input.LA(1) ) {
             case 15:
@@ -398,90 +398,90 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             switch (alt3) {
                 case 1 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:162:5: this_Layer_0= ruleLayer
+                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:162:5: this_DCLLayer_0= ruleDCLLayer
                     {
                      
-                            newCompositeNode(grammarAccess.getStructureElementAccess().getLayerParserRuleCall_0()); 
+                            newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLLayerParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_ruleLayer_in_ruleStructureElement319);
-                    this_Layer_0=ruleLayer();
+                    pushFollow(FOLLOW_ruleDCLLayer_in_ruleDCLStructureElement319);
+                    this_DCLLayer_0=ruleDCLLayer();
 
                     state._fsp--;
 
                      
-                            current = this_Layer_0; 
+                            current = this_DCLLayer_0; 
                             afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 2 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:172:5: this_Component_1= ruleComponent
+                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:172:5: this_DCLComponent_1= ruleDCLComponent
                     {
                      
-                            newCompositeNode(grammarAccess.getStructureElementAccess().getComponentParserRuleCall_1()); 
+                            newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentParserRuleCall_1()); 
                         
-                    pushFollow(FOLLOW_ruleComponent_in_ruleStructureElement346);
-                    this_Component_1=ruleComponent();
+                    pushFollow(FOLLOW_ruleDCLComponent_in_ruleDCLStructureElement346);
+                    this_DCLComponent_1=ruleDCLComponent();
 
                     state._fsp--;
 
                      
-                            current = this_Component_1; 
+                            current = this_DCLComponent_1; 
                             afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 3 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:182:5: this_SubSystem_2= ruleSubSystem
+                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:182:5: this_DCLSubSystem_2= ruleDCLSubSystem
                     {
                      
-                            newCompositeNode(grammarAccess.getStructureElementAccess().getSubSystemParserRuleCall_2()); 
+                            newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLSubSystemParserRuleCall_2()); 
                         
-                    pushFollow(FOLLOW_ruleSubSystem_in_ruleStructureElement373);
-                    this_SubSystem_2=ruleSubSystem();
+                    pushFollow(FOLLOW_ruleDCLSubSystem_in_ruleDCLStructureElement373);
+                    this_DCLSubSystem_2=ruleDCLSubSystem();
 
                     state._fsp--;
 
                      
-                            current = this_SubSystem_2; 
+                            current = this_DCLSubSystem_2; 
                             afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 4 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:192:5: this_ArchitectureView_3= ruleArchitectureView
+                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:192:5: this_DCLArchitectureView_3= ruleDCLArchitectureView
                     {
                      
-                            newCompositeNode(grammarAccess.getStructureElementAccess().getArchitectureViewParserRuleCall_3()); 
+                            newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLArchitectureViewParserRuleCall_3()); 
                         
-                    pushFollow(FOLLOW_ruleArchitectureView_in_ruleStructureElement400);
-                    this_ArchitectureView_3=ruleArchitectureView();
+                    pushFollow(FOLLOW_ruleDCLArchitectureView_in_ruleDCLStructureElement400);
+                    this_DCLArchitectureView_3=ruleDCLArchitectureView();
 
                     state._fsp--;
 
                      
-                            current = this_ArchitectureView_3; 
+                            current = this_DCLArchitectureView_3; 
                             afterParserOrEnumRuleCall();
                         
 
                     }
                     break;
                 case 5 :
-                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:202:5: this_SoftwareSystem_4= ruleSoftwareSystem
+                    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:202:5: this_DCLSoftwareSystem_4= ruleDCLSoftwareSystem
                     {
                      
-                            newCompositeNode(grammarAccess.getStructureElementAccess().getSoftwareSystemParserRuleCall_4()); 
+                            newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLSoftwareSystemParserRuleCall_4()); 
                         
-                    pushFollow(FOLLOW_ruleSoftwareSystem_in_ruleStructureElement427);
-                    this_SoftwareSystem_4=ruleSoftwareSystem();
+                    pushFollow(FOLLOW_ruleDCLSoftwareSystem_in_ruleDCLStructureElement427);
+                    this_DCLSoftwareSystem_4=ruleDCLSoftwareSystem();
 
                     state._fsp--;
 
                      
-                            current = this_SoftwareSystem_4; 
+                            current = this_DCLSoftwareSystem_4; 
                             afterParserOrEnumRuleCall();
                         
 
@@ -504,29 +504,29 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleStructureElement"
+    // $ANTLR end "ruleDCLStructureElement"
 
 
-    // $ANTLR start "entryRuleLayer"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:218:1: entryRuleLayer returns [EObject current=null] : iv_ruleLayer= ruleLayer EOF ;
-    public final EObject entryRuleLayer() throws RecognitionException {
+    // $ANTLR start "entryRuleDCLLayer"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:218:1: entryRuleDCLLayer returns [EObject current=null] : iv_ruleDCLLayer= ruleDCLLayer EOF ;
+    public final EObject entryRuleDCLLayer() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleLayer = null;
+        EObject iv_ruleDCLLayer = null;
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:219:2: (iv_ruleLayer= ruleLayer EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:220:2: iv_ruleLayer= ruleLayer EOF
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:219:2: (iv_ruleDCLLayer= ruleDCLLayer EOF )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:220:2: iv_ruleDCLLayer= ruleDCLLayer EOF
             {
-             newCompositeNode(grammarAccess.getLayerRule()); 
-            pushFollow(FOLLOW_ruleLayer_in_entryRuleLayer462);
-            iv_ruleLayer=ruleLayer();
+             newCompositeNode(grammarAccess.getDCLLayerRule()); 
+            pushFollow(FOLLOW_ruleDCLLayer_in_entryRuleDCLLayer462);
+            iv_ruleDCLLayer=ruleDCLLayer();
 
             state._fsp--;
 
-             current =iv_ruleLayer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleLayer472); 
+             current =iv_ruleDCLLayer; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLLayer472); 
 
             }
 
@@ -540,12 +540,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleLayer"
+    // $ANTLR end "entryRuleDCLLayer"
 
 
-    // $ANTLR start "ruleLayer"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:227:1: ruleLayer returns [EObject current=null] : (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
-    public final EObject ruleLayer() throws RecognitionException {
+    // $ANTLR start "ruleDCLLayer"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:227:1: ruleDCLLayer returns [EObject current=null] : (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    public final EObject ruleDCLLayer() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -561,9 +561,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:231:1: (otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:231:3: otherlv_0= 'layer' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleLayer509); 
+            otherlv_0=(Token)match(input,15,FOLLOW_15_in_ruleDCLLayer509); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getLayerAccess().getLayerKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getDCLLayerAccess().getLayerKeyword_0());
                 
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:235:1: ( (lv_name_1_0= RULE_ID ) )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:236:1: (lv_name_1_0= RULE_ID )
@@ -571,13 +571,13 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:236:1: (lv_name_1_0= RULE_ID )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:237:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleLayer526); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLLayer526); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getLayerAccess().getNameIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getDCLLayerAccess().getNameIDTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getLayerRule());
+            	            current = createModelElement(grammarAccess.getDCLLayerRule());
             	        }
                    		setWithLastConsumed(
                    			current, 
@@ -591,9 +591,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleLayer543); 
+            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLLayer543); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getLayerAccess().getSemicolonKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getDCLLayerAccess().getSemicolonKeyword_2());
                 
 
             }
@@ -612,29 +612,29 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleLayer"
+    // $ANTLR end "ruleDCLLayer"
 
 
-    // $ANTLR start "entryRuleComponent"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:265:1: entryRuleComponent returns [EObject current=null] : iv_ruleComponent= ruleComponent EOF ;
-    public final EObject entryRuleComponent() throws RecognitionException {
+    // $ANTLR start "entryRuleDCLComponent"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:265:1: entryRuleDCLComponent returns [EObject current=null] : iv_ruleDCLComponent= ruleDCLComponent EOF ;
+    public final EObject entryRuleDCLComponent() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleComponent = null;
+        EObject iv_ruleDCLComponent = null;
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:266:2: (iv_ruleComponent= ruleComponent EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:267:2: iv_ruleComponent= ruleComponent EOF
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:266:2: (iv_ruleDCLComponent= ruleDCLComponent EOF )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:267:2: iv_ruleDCLComponent= ruleDCLComponent EOF
             {
-             newCompositeNode(grammarAccess.getComponentRule()); 
-            pushFollow(FOLLOW_ruleComponent_in_entryRuleComponent579);
-            iv_ruleComponent=ruleComponent();
+             newCompositeNode(grammarAccess.getDCLComponentRule()); 
+            pushFollow(FOLLOW_ruleDCLComponent_in_entryRuleDCLComponent579);
+            iv_ruleDCLComponent=ruleDCLComponent();
 
             state._fsp--;
 
-             current =iv_ruleComponent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleComponent589); 
+             current =iv_ruleDCLComponent; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLComponent589); 
 
             }
 
@@ -648,12 +648,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleComponent"
+    // $ANTLR end "entryRuleDCLComponent"
 
 
-    // $ANTLR start "ruleComponent"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:274:1: ruleComponent returns [EObject current=null] : (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
-    public final EObject ruleComponent() throws RecognitionException {
+    // $ANTLR start "ruleDCLComponent"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:274:1: ruleDCLComponent returns [EObject current=null] : (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    public final EObject ruleDCLComponent() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -669,9 +669,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:278:1: (otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:278:3: otherlv_0= 'component' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleComponent626); 
+            otherlv_0=(Token)match(input,17,FOLLOW_17_in_ruleDCLComponent626); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getComponentAccess().getComponentKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getDCLComponentAccess().getComponentKeyword_0());
                 
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:282:1: ( (lv_name_1_0= RULE_ID ) )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:283:1: (lv_name_1_0= RULE_ID )
@@ -679,13 +679,13 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:283:1: (lv_name_1_0= RULE_ID )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:284:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleComponent643); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLComponent643); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getComponentAccess().getNameIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getDCLComponentAccess().getNameIDTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getComponentRule());
+            	            current = createModelElement(grammarAccess.getDCLComponentRule());
             	        }
                    		setWithLastConsumed(
                    			current, 
@@ -699,9 +699,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleComponent660); 
+            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLComponent660); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getComponentAccess().getSemicolonKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getDCLComponentAccess().getSemicolonKeyword_2());
                 
 
             }
@@ -720,29 +720,29 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleComponent"
+    // $ANTLR end "ruleDCLComponent"
 
 
-    // $ANTLR start "entryRuleSubSystem"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:312:1: entryRuleSubSystem returns [EObject current=null] : iv_ruleSubSystem= ruleSubSystem EOF ;
-    public final EObject entryRuleSubSystem() throws RecognitionException {
+    // $ANTLR start "entryRuleDCLSubSystem"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:312:1: entryRuleDCLSubSystem returns [EObject current=null] : iv_ruleDCLSubSystem= ruleDCLSubSystem EOF ;
+    public final EObject entryRuleDCLSubSystem() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleSubSystem = null;
+        EObject iv_ruleDCLSubSystem = null;
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:313:2: (iv_ruleSubSystem= ruleSubSystem EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:314:2: iv_ruleSubSystem= ruleSubSystem EOF
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:313:2: (iv_ruleDCLSubSystem= ruleDCLSubSystem EOF )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:314:2: iv_ruleDCLSubSystem= ruleDCLSubSystem EOF
             {
-             newCompositeNode(grammarAccess.getSubSystemRule()); 
-            pushFollow(FOLLOW_ruleSubSystem_in_entryRuleSubSystem696);
-            iv_ruleSubSystem=ruleSubSystem();
+             newCompositeNode(grammarAccess.getDCLSubSystemRule()); 
+            pushFollow(FOLLOW_ruleDCLSubSystem_in_entryRuleDCLSubSystem696);
+            iv_ruleDCLSubSystem=ruleDCLSubSystem();
 
             state._fsp--;
 
-             current =iv_ruleSubSystem; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSubSystem706); 
+             current =iv_ruleDCLSubSystem; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLSubSystem706); 
 
             }
 
@@ -756,12 +756,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleSubSystem"
+    // $ANTLR end "entryRuleDCLSubSystem"
 
 
-    // $ANTLR start "ruleSubSystem"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:321:1: ruleSubSystem returns [EObject current=null] : (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
-    public final EObject ruleSubSystem() throws RecognitionException {
+    // $ANTLR start "ruleDCLSubSystem"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:321:1: ruleDCLSubSystem returns [EObject current=null] : (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    public final EObject ruleDCLSubSystem() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -777,9 +777,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:325:1: (otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:325:3: otherlv_0= 'subSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleSubSystem743); 
+            otherlv_0=(Token)match(input,18,FOLLOW_18_in_ruleDCLSubSystem743); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getSubSystemAccess().getSubSystemKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getDCLSubSystemAccess().getSubSystemKeyword_0());
                 
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:329:1: ( (lv_name_1_0= RULE_ID ) )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:330:1: (lv_name_1_0= RULE_ID )
@@ -787,13 +787,13 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:330:1: (lv_name_1_0= RULE_ID )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:331:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSubSystem760); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLSubSystem760); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getSubSystemAccess().getNameIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getDCLSubSystemAccess().getNameIDTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getSubSystemRule());
+            	            current = createModelElement(grammarAccess.getDCLSubSystemRule());
             	        }
                    		setWithLastConsumed(
                    			current, 
@@ -807,9 +807,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleSubSystem777); 
+            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLSubSystem777); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getSubSystemAccess().getSemicolonKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getDCLSubSystemAccess().getSemicolonKeyword_2());
                 
 
             }
@@ -828,29 +828,29 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleSubSystem"
+    // $ANTLR end "ruleDCLSubSystem"
 
 
-    // $ANTLR start "entryRuleArchitectureView"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:359:1: entryRuleArchitectureView returns [EObject current=null] : iv_ruleArchitectureView= ruleArchitectureView EOF ;
-    public final EObject entryRuleArchitectureView() throws RecognitionException {
+    // $ANTLR start "entryRuleDCLArchitectureView"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:359:1: entryRuleDCLArchitectureView returns [EObject current=null] : iv_ruleDCLArchitectureView= ruleDCLArchitectureView EOF ;
+    public final EObject entryRuleDCLArchitectureView() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleArchitectureView = null;
+        EObject iv_ruleDCLArchitectureView = null;
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:360:2: (iv_ruleArchitectureView= ruleArchitectureView EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:361:2: iv_ruleArchitectureView= ruleArchitectureView EOF
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:360:2: (iv_ruleDCLArchitectureView= ruleDCLArchitectureView EOF )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:361:2: iv_ruleDCLArchitectureView= ruleDCLArchitectureView EOF
             {
-             newCompositeNode(grammarAccess.getArchitectureViewRule()); 
-            pushFollow(FOLLOW_ruleArchitectureView_in_entryRuleArchitectureView813);
-            iv_ruleArchitectureView=ruleArchitectureView();
+             newCompositeNode(grammarAccess.getDCLArchitectureViewRule()); 
+            pushFollow(FOLLOW_ruleDCLArchitectureView_in_entryRuleDCLArchitectureView813);
+            iv_ruleDCLArchitectureView=ruleDCLArchitectureView();
 
             state._fsp--;
 
-             current =iv_ruleArchitectureView; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArchitectureView823); 
+             current =iv_ruleDCLArchitectureView; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLArchitectureView823); 
 
             }
 
@@ -864,12 +864,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleArchitectureView"
+    // $ANTLR end "entryRuleDCLArchitectureView"
 
 
-    // $ANTLR start "ruleArchitectureView"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:368:1: ruleArchitectureView returns [EObject current=null] : (otherlv_0= 'architectureView' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
-    public final EObject ruleArchitectureView() throws RecognitionException {
+    // $ANTLR start "ruleDCLArchitectureView"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:368:1: ruleDCLArchitectureView returns [EObject current=null] : (otherlv_0= 'architectureView' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    public final EObject ruleDCLArchitectureView() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -885,9 +885,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:372:1: (otherlv_0= 'architectureView' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:372:3: otherlv_0= 'architectureView' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleArchitectureView860); 
+            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleDCLArchitectureView860); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getArchitectureViewAccess().getArchitectureViewKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getDCLArchitectureViewAccess().getArchitectureViewKeyword_0());
                 
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:376:1: ( (lv_name_1_0= RULE_ID ) )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:377:1: (lv_name_1_0= RULE_ID )
@@ -895,13 +895,13 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:377:1: (lv_name_1_0= RULE_ID )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:378:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleArchitectureView877); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLArchitectureView877); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getArchitectureViewAccess().getNameIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getDCLArchitectureViewAccess().getNameIDTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getArchitectureViewRule());
+            	            current = createModelElement(grammarAccess.getDCLArchitectureViewRule());
             	        }
                    		setWithLastConsumed(
                    			current, 
@@ -915,9 +915,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleArchitectureView894); 
+            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLArchitectureView894); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getArchitectureViewAccess().getSemicolonKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getDCLArchitectureViewAccess().getSemicolonKeyword_2());
                 
 
             }
@@ -936,29 +936,29 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleArchitectureView"
+    // $ANTLR end "ruleDCLArchitectureView"
 
 
-    // $ANTLR start "entryRuleSoftwareSystem"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:406:1: entryRuleSoftwareSystem returns [EObject current=null] : iv_ruleSoftwareSystem= ruleSoftwareSystem EOF ;
-    public final EObject entryRuleSoftwareSystem() throws RecognitionException {
+    // $ANTLR start "entryRuleDCLSoftwareSystem"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:406:1: entryRuleDCLSoftwareSystem returns [EObject current=null] : iv_ruleDCLSoftwareSystem= ruleDCLSoftwareSystem EOF ;
+    public final EObject entryRuleDCLSoftwareSystem() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleSoftwareSystem = null;
+        EObject iv_ruleDCLSoftwareSystem = null;
 
 
         try {
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:407:2: (iv_ruleSoftwareSystem= ruleSoftwareSystem EOF )
-            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:408:2: iv_ruleSoftwareSystem= ruleSoftwareSystem EOF
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:407:2: (iv_ruleDCLSoftwareSystem= ruleDCLSoftwareSystem EOF )
+            // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:408:2: iv_ruleDCLSoftwareSystem= ruleDCLSoftwareSystem EOF
             {
-             newCompositeNode(grammarAccess.getSoftwareSystemRule()); 
-            pushFollow(FOLLOW_ruleSoftwareSystem_in_entryRuleSoftwareSystem930);
-            iv_ruleSoftwareSystem=ruleSoftwareSystem();
+             newCompositeNode(grammarAccess.getDCLSoftwareSystemRule()); 
+            pushFollow(FOLLOW_ruleDCLSoftwareSystem_in_entryRuleDCLSoftwareSystem930);
+            iv_ruleDCLSoftwareSystem=ruleDCLSoftwareSystem();
 
             state._fsp--;
 
-             current =iv_ruleSoftwareSystem; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSoftwareSystem940); 
+             current =iv_ruleDCLSoftwareSystem; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDCLSoftwareSystem940); 
 
             }
 
@@ -972,12 +972,12 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "entryRuleSoftwareSystem"
+    // $ANTLR end "entryRuleDCLSoftwareSystem"
 
 
-    // $ANTLR start "ruleSoftwareSystem"
-    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:415:1: ruleSoftwareSystem returns [EObject current=null] : (otherlv_0= 'softwareSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
-    public final EObject ruleSoftwareSystem() throws RecognitionException {
+    // $ANTLR start "ruleDCLSoftwareSystem"
+    // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:415:1: ruleDCLSoftwareSystem returns [EObject current=null] : (otherlv_0= 'softwareSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' ) ;
+    public final EObject ruleDCLSoftwareSystem() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
@@ -993,9 +993,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:419:1: (otherlv_0= 'softwareSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';' )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:419:3: otherlv_0= 'softwareSystem' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= ';'
             {
-            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleSoftwareSystem977); 
+            otherlv_0=(Token)match(input,20,FOLLOW_20_in_ruleDCLSoftwareSystem977); 
 
-                	newLeafNode(otherlv_0, grammarAccess.getSoftwareSystemAccess().getSoftwareSystemKeyword_0());
+                	newLeafNode(otherlv_0, grammarAccess.getDCLSoftwareSystemAccess().getSoftwareSystemKeyword_0());
                 
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:423:1: ( (lv_name_1_0= RULE_ID ) )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:424:1: (lv_name_1_0= RULE_ID )
@@ -1003,13 +1003,13 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:424:1: (lv_name_1_0= RULE_ID )
             // ../com.br.terra.dcl/src-gen/com/br/terra/dcl/parser/antlr/internal/InternalDCL.g:425:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleSoftwareSystem994); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCLSoftwareSystem994); 
 
-            			newLeafNode(lv_name_1_0, grammarAccess.getSoftwareSystemAccess().getNameIDTerminalRuleCall_1_0()); 
+            			newLeafNode(lv_name_1_0, grammarAccess.getDCLSoftwareSystemAccess().getNameIDTerminalRuleCall_1_0()); 
             		
 
             	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getSoftwareSystemRule());
+            	            current = createModelElement(grammarAccess.getDCLSoftwareSystemRule());
             	        }
                    		setWithLastConsumed(
                    			current, 
@@ -1023,9 +1023,9 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleSoftwareSystem1011); 
+            otherlv_2=(Token)match(input,16,FOLLOW_16_in_ruleDCLSoftwareSystem1011); 
 
-                	newLeafNode(otherlv_2, grammarAccess.getSoftwareSystemAccess().getSemicolonKeyword_2());
+                	newLeafNode(otherlv_2, grammarAccess.getDCLSoftwareSystemAccess().getSemicolonKeyword_2());
                 
 
             }
@@ -1044,7 +1044,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "ruleSoftwareSystem"
+    // $ANTLR end "ruleDCLSoftwareSystem"
 
 
     // $ANTLR start "entryRuleDCDecl"
@@ -1216,7 +1216,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1124); 
 
-                    		newLeafNode(otherlv_1, grammarAccess.getDCDeclAccess().getTStructureElementCrossReference_0_1_0()); 
+                    		newLeafNode(otherlv_1, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_0_1_0()); 
                     	
 
                     }
@@ -1299,7 +1299,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_4=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1186); 
 
-                    		newLeafNode(otherlv_4, grammarAccess.getDCDeclAccess().getTypeStructureElementCrossReference_0_4_0()); 
+                    		newLeafNode(otherlv_4, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_0_4_0()); 
                     	
 
                     }
@@ -1336,7 +1336,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1226); 
 
-                    		newLeafNode(otherlv_6, grammarAccess.getDCDeclAccess().getTStructureElementCrossReference_1_0_0()); 
+                    		newLeafNode(otherlv_6, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_1_0_0()); 
                     	
 
                     }
@@ -1419,7 +1419,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_9=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1288); 
 
-                    		newLeafNode(otherlv_9, grammarAccess.getDCDeclAccess().getTypeStructureElementCrossReference_1_3_0()); 
+                    		newLeafNode(otherlv_9, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_1_3_0()); 
                     	
 
                     }
@@ -1456,7 +1456,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_11=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1328); 
 
-                    		newLeafNode(otherlv_11, grammarAccess.getDCDeclAccess().getTStructureElementCrossReference_2_0_0()); 
+                    		newLeafNode(otherlv_11, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_2_0_0()); 
                     	
 
                     }
@@ -1570,7 +1570,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_15=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1411); 
 
-                    		newLeafNode(otherlv_15, grammarAccess.getDCDeclAccess().getTypeStructureElementCrossReference_2_4_0()); 
+                    		newLeafNode(otherlv_15, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_2_4_0()); 
                     	
 
                     }
@@ -1607,7 +1607,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_17=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1451); 
 
-                    		newLeafNode(otherlv_17, grammarAccess.getDCDeclAccess().getTStructureElementCrossReference_3_0_0()); 
+                    		newLeafNode(otherlv_17, grammarAccess.getDCDeclAccess().getTDCLStructureElementCrossReference_3_0_0()); 
                     	
 
                     }
@@ -1690,7 +1690,7 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
                             
                     otherlv_20=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleDCDecl1513); 
 
-                    		newLeafNode(otherlv_20, grammarAccess.getDCDeclAccess().getTypeStructureElementCrossReference_3_3_0()); 
+                    		newLeafNode(otherlv_20, grammarAccess.getDCDeclAccess().getTypeDCLStructureElementCrossReference_3_3_0()); 
                     	
 
                     }
@@ -2703,44 +2703,44 @@ public class InternalDCLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_EOF_in_entryRuleModel85 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_11_in_ruleModel122 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_ruleModel134 = new BitSet(new long[]{0x00000000001E8000L});
-    public static final BitSet FOLLOW_ruleStructureElement_in_ruleModel155 = new BitSet(new long[]{0x00000000001EA000L});
+    public static final BitSet FOLLOW_ruleDCLStructureElement_in_ruleModel155 = new BitSet(new long[]{0x00000000001EA000L});
     public static final BitSet FOLLOW_13_in_ruleModel168 = new BitSet(new long[]{0x0000000000004000L});
     public static final BitSet FOLLOW_14_in_ruleModel180 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_12_in_ruleModel192 = new BitSet(new long[]{0x0000000000202010L});
     public static final BitSet FOLLOW_ruleDCDecl_in_ruleModel213 = new BitSet(new long[]{0x0000000000202010L});
     public static final BitSet FOLLOW_13_in_ruleModel226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleStructureElement_in_entryRuleStructureElement262 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleStructureElement272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLayer_in_ruleStructureElement319 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponent_in_ruleStructureElement346 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubSystem_in_ruleStructureElement373 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArchitectureView_in_ruleStructureElement400 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSoftwareSystem_in_ruleStructureElement427 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleLayer_in_entryRuleLayer462 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleLayer472 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleLayer509 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleLayer526 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleLayer543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleComponent_in_entryRuleComponent579 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleComponent589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_ruleComponent626 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleComponent643 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleComponent660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSubSystem_in_entryRuleSubSystem696 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSubSystem706 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_ruleSubSystem743 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSubSystem760 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleSubSystem777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArchitectureView_in_entryRuleArchitectureView813 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArchitectureView823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleArchitectureView860 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleArchitectureView877 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleArchitectureView894 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSoftwareSystem_in_entryRuleSoftwareSystem930 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSoftwareSystem940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_ruleSoftwareSystem977 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleSoftwareSystem994 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_16_in_ruleSoftwareSystem1011 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLStructureElement_in_entryRuleDCLStructureElement262 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDCLStructureElement272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLLayer_in_ruleDCLStructureElement319 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLComponent_in_ruleDCLStructureElement346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLSubSystem_in_ruleDCLStructureElement373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLArchitectureView_in_ruleDCLStructureElement400 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLSoftwareSystem_in_ruleDCLStructureElement427 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLLayer_in_entryRuleDCLLayer462 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDCLLayer472 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleDCLLayer509 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLLayer526 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleDCLLayer543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLComponent_in_entryRuleDCLComponent579 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDCLComponent589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_ruleDCLComponent626 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLComponent643 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleDCLComponent660 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLSubSystem_in_entryRuleDCLSubSystem696 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDCLSubSystem706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_ruleDCLSubSystem743 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLSubSystem760 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleDCLSubSystem777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLArchitectureView_in_entryRuleDCLArchitectureView813 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDCLArchitectureView823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleDCLArchitectureView860 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLArchitectureView877 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleDCLArchitectureView894 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleDCLSoftwareSystem_in_entryRuleDCLSoftwareSystem930 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDCLSoftwareSystem940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_ruleDCLSoftwareSystem977 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleDCLSoftwareSystem994 = new BitSet(new long[]{0x0000000000010000L});
+    public static final BitSet FOLLOW_16_in_ruleDCLSoftwareSystem1011 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleDCDecl_in_entryRuleDCDecl1047 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleDCDecl1057 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOnly_in_ruleDCDecl1104 = new BitSet(new long[]{0x0000000000000010L});

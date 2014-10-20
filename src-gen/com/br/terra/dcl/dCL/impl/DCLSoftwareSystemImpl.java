@@ -2,28 +2,28 @@
  */
 package com.br.terra.dcl.dCL.impl;
 
-import com.br.terra.dcl.dCL.ArchitectureView;
 import com.br.terra.dcl.dCL.DCLPackage;
+import com.br.terra.dcl.dCL.DCLSoftwareSystem;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Architecture View</b></em>'.
+ * An implementation of the model object '<em><b>Software System</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class ArchitectureViewImpl extends StructureElementImpl implements ArchitectureView
+public class DCLSoftwareSystemImpl extends DCLStructureElementImpl implements DCLSoftwareSystem
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ArchitectureViewImpl()
+  protected DCLSoftwareSystemImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class ArchitectureViewImpl extends StructureElementImpl implements Archit
   @Override
   protected EClass eStaticClass()
   {
-    return DCLPackage.Literals.ARCHITECTURE_VIEW;
+    return DCLPackage.Literals.DCL_SOFTWARE_SYSTEM;
   }
 
-} //ArchitectureViewImpl
+} //DCLSoftwareSystemImpl

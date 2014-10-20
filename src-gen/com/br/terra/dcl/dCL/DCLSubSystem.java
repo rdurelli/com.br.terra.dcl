@@ -9,10 +9,10 @@ package com.br.terra.dcl.dCL;
  * <!-- end-user-doc -->
  *
  *
- * @see com.br.terra.dcl.dCL.DCLPackage#getSubSystem()
+ * @see com.br.terra.dcl.dCL.DCLPackage#getDCLSubSystem()
  * @model
  * @generated
  */
-public interface SubSystem extends StructureElement
+public interface DCLSubSystem extends DCLStructureElement
 {
-} // SubSystem
+} // DCLSubSystem

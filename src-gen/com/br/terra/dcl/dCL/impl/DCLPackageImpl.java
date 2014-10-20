@@ -2,24 +2,24 @@
  */
 package com.br.terra.dcl.dCL.impl;
 
-import com.br.terra.dcl.dCL.ArchitectureView;
 import com.br.terra.dcl.dCL.BasicType;
 import com.br.terra.dcl.dCL.Can;
 import com.br.terra.dcl.dCL.Cannot;
-import com.br.terra.dcl.dCL.Component;
 import com.br.terra.dcl.dCL.DCDecl;
+import com.br.terra.dcl.dCL.DCLArchitectureView;
+import com.br.terra.dcl.dCL.DCLComponent;
 import com.br.terra.dcl.dCL.DCLFactory;
+import com.br.terra.dcl.dCL.DCLLayer;
 import com.br.terra.dcl.dCL.DCLPackage;
+import com.br.terra.dcl.dCL.DCLSoftwareSystem;
+import com.br.terra.dcl.dCL.DCLStructureElement;
+import com.br.terra.dcl.dCL.DCLSubSystem;
 import com.br.terra.dcl.dCL.ElementType;
 import com.br.terra.dcl.dCL.EntityType;
-import com.br.terra.dcl.dCL.Layer;
 import com.br.terra.dcl.dCL.Model;
 import com.br.terra.dcl.dCL.Must;
 import com.br.terra.dcl.dCL.Only;
 import com.br.terra.dcl.dCL.Only2;
-import com.br.terra.dcl.dCL.SoftwareSystem;
-import com.br.terra.dcl.dCL.StructureElement;
-import com.br.terra.dcl.dCL.SubSystem;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -48,42 +48,42 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass structureElementEClass = null;
+  private EClass dclStructureElementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass layerEClass = null;
+  private EClass dclLayerEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass componentEClass = null;
+  private EClass dclComponentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass subSystemEClass = null;
+  private EClass dclSubSystemEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass architectureViewEClass = null;
+  private EClass dclArchitectureViewEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass softwareSystemEClass = null;
+  private EClass dclSoftwareSystemEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -246,9 +246,9 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getStructureElement()
+  public EClass getDCLStructureElement()
   {
-    return structureElementEClass;
+    return dclStructureElementEClass;
   }
 
   /**
@@ -256,9 +256,9 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getStructureElement_Name()
+  public EAttribute getDCLStructureElement_Name()
   {
-    return (EAttribute)structureElementEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)dclStructureElementEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -266,9 +266,9 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getLayer()
+  public EClass getDCLLayer()
   {
-    return layerEClass;
+    return dclLayerEClass;
   }
 
   /**
@@ -276,9 +276,9 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getComponent()
+  public EClass getDCLComponent()
   {
-    return componentEClass;
+    return dclComponentEClass;
   }
 
   /**
@@ -286,9 +286,9 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSubSystem()
+  public EClass getDCLSubSystem()
   {
-    return subSystemEClass;
+    return dclSubSystemEClass;
   }
 
   /**
@@ -296,9 +296,9 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getArchitectureView()
+  public EClass getDCLArchitectureView()
   {
-    return architectureViewEClass;
+    return dclArchitectureViewEClass;
   }
 
   /**
@@ -306,9 +306,9 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getSoftwareSystem()
+  public EClass getDCLSoftwareSystem()
   {
-    return softwareSystemEClass;
+    return dclSoftwareSystemEClass;
   }
 
   /**
@@ -595,18 +595,18 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
     createEReference(modelEClass, MODEL__STRUCTURE_ELEMENTS);
     createEReference(modelEClass, MODEL__DC_DECL);
 
-    structureElementEClass = createEClass(STRUCTURE_ELEMENT);
-    createEAttribute(structureElementEClass, STRUCTURE_ELEMENT__NAME);
+    dclStructureElementEClass = createEClass(DCL_STRUCTURE_ELEMENT);
+    createEAttribute(dclStructureElementEClass, DCL_STRUCTURE_ELEMENT__NAME);
 
-    layerEClass = createEClass(LAYER);
+    dclLayerEClass = createEClass(DCL_LAYER);
 
-    componentEClass = createEClass(COMPONENT);
+    dclComponentEClass = createEClass(DCL_COMPONENT);
 
-    subSystemEClass = createEClass(SUB_SYSTEM);
+    dclSubSystemEClass = createEClass(DCL_SUB_SYSTEM);
 
-    architectureViewEClass = createEClass(ARCHITECTURE_VIEW);
+    dclArchitectureViewEClass = createEClass(DCL_ARCHITECTURE_VIEW);
 
-    softwareSystemEClass = createEClass(SOFTWARE_SYSTEM);
+    dclSoftwareSystemEClass = createEClass(DCL_SOFTWARE_SYSTEM);
 
     dcDeclEClass = createEClass(DC_DECL);
     createEReference(dcDeclEClass, DC_DECL__ONLY);
@@ -672,38 +672,38 @@ public class DCLPackageImpl extends EPackageImpl implements DCLPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    layerEClass.getESuperTypes().add(this.getStructureElement());
-    componentEClass.getESuperTypes().add(this.getStructureElement());
-    subSystemEClass.getESuperTypes().add(this.getStructureElement());
-    architectureViewEClass.getESuperTypes().add(this.getStructureElement());
-    softwareSystemEClass.getESuperTypes().add(this.getStructureElement());
+    dclLayerEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclComponentEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclSubSystemEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclArchitectureViewEClass.getESuperTypes().add(this.getDCLStructureElement());
+    dclSoftwareSystemEClass.getESuperTypes().add(this.getDCLStructureElement());
     basicTypeEClass.getESuperTypes().add(this.getElementType());
     entityTypeEClass.getESuperTypes().add(this.getElementType());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_StructureElements(), this.getStructureElement(), null, "structureElements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_StructureElements(), this.getDCLStructureElement(), null, "structureElements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getModel_DCDecl(), this.getDCDecl(), null, "dCDecl", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(structureElementEClass, StructureElement.class, "StructureElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getStructureElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, StructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(dclStructureElementEClass, DCLStructureElement.class, "DCLStructureElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDCLStructureElement_Name(), ecorePackage.getEString(), "name", null, 0, 1, DCLStructureElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(layerEClass, Layer.class, "Layer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(dclLayerEClass, DCLLayer.class, "DCLLayer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(dclComponentEClass, DCLComponent.class, "DCLComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(subSystemEClass, SubSystem.class, "SubSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(dclSubSystemEClass, DCLSubSystem.class, "DCLSubSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(architectureViewEClass, ArchitectureView.class, "ArchitectureView", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(dclArchitectureViewEClass, DCLArchitectureView.class, "DCLArchitectureView", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-    initEClass(softwareSystemEClass, SoftwareSystem.class, "SoftwareSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEClass(dclSoftwareSystemEClass, DCLSoftwareSystem.class, "DCLSoftwareSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(dcDeclEClass, DCDecl.class, "DCDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDCDecl_Only(), this.getOnly(), null, "only", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDCDecl_T(), this.getStructureElement(), null, "t", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCDecl_T(), this.getDCLStructureElement(), null, "t", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDCDecl_Can(), this.getCan(), null, "can", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDCDecl_ElementType(), this.getElementType(), null, "elementType", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDCDecl_Type(), this.getStructureElement(), null, "type", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDCDecl_Type(), this.getDCLStructureElement(), null, "type", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDCDecl_Cannot(), this.getCannot(), null, "cannot", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDCDecl_Only2(), this.getOnly2(), null, "only2", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDCDecl_Must(), this.getMust(), null, "must", null, 0, 1, DCDecl.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

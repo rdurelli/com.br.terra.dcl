@@ -2,28 +2,28 @@
  */
 package com.br.terra.dcl.dCL.impl;
 
+import com.br.terra.dcl.dCL.DCLLayer;
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.SoftwareSystem;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Software System</b></em>'.
+ * An implementation of the model object '<em><b>Layer</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class SoftwareSystemImpl extends StructureElementImpl implements SoftwareSystem
+public class DCLLayerImpl extends DCLStructureElementImpl implements DCLLayer
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected SoftwareSystemImpl()
+  protected DCLLayerImpl()
   {
     super();
   }
@@ -36,7 +36,7 @@ public class SoftwareSystemImpl extends StructureElementImpl implements Software
   @Override
   protected EClass eStaticClass()
   {
-    return DCLPackage.Literals.SOFTWARE_SYSTEM;
+    return DCLPackage.Literals.DCL_LAYER;
   }
 
-} //SoftwareSystemImpl
+} //DCLLayerImpl

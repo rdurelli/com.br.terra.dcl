@@ -65,12 +65,12 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
     switch (eClass.getClassifierID())
     {
       case DCLPackage.MODEL: return createModel();
-      case DCLPackage.STRUCTURE_ELEMENT: return createStructureElement();
-      case DCLPackage.LAYER: return createLayer();
-      case DCLPackage.COMPONENT: return createComponent();
-      case DCLPackage.SUB_SYSTEM: return createSubSystem();
-      case DCLPackage.ARCHITECTURE_VIEW: return createArchitectureView();
-      case DCLPackage.SOFTWARE_SYSTEM: return createSoftwareSystem();
+      case DCLPackage.DCL_STRUCTURE_ELEMENT: return createDCLStructureElement();
+      case DCLPackage.DCL_LAYER: return createDCLLayer();
+      case DCLPackage.DCL_COMPONENT: return createDCLComponent();
+      case DCLPackage.DCL_SUB_SYSTEM: return createDCLSubSystem();
+      case DCLPackage.DCL_ARCHITECTURE_VIEW: return createDCLArchitectureView();
+      case DCLPackage.DCL_SOFTWARE_SYSTEM: return createDCLSoftwareSystem();
       case DCLPackage.DC_DECL: return createDCDecl();
       case DCLPackage.ONLY: return createOnly();
       case DCLPackage.CAN: return createCan();
@@ -101,10 +101,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public StructureElement createStructureElement()
+  public DCLStructureElement createDCLStructureElement()
   {
-    StructureElementImpl structureElement = new StructureElementImpl();
-    return structureElement;
+    DCLStructureElementImpl dclStructureElement = new DCLStructureElementImpl();
+    return dclStructureElement;
   }
 
   /**
@@ -112,10 +112,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Layer createLayer()
+  public DCLLayer createDCLLayer()
   {
-    LayerImpl layer = new LayerImpl();
-    return layer;
+    DCLLayerImpl dclLayer = new DCLLayerImpl();
+    return dclLayer;
   }
 
   /**
@@ -123,10 +123,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Component createComponent()
+  public DCLComponent createDCLComponent()
   {
-    ComponentImpl component = new ComponentImpl();
-    return component;
+    DCLComponentImpl dclComponent = new DCLComponentImpl();
+    return dclComponent;
   }
 
   /**
@@ -134,10 +134,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubSystem createSubSystem()
+  public DCLSubSystem createDCLSubSystem()
   {
-    SubSystemImpl subSystem = new SubSystemImpl();
-    return subSystem;
+    DCLSubSystemImpl dclSubSystem = new DCLSubSystemImpl();
+    return dclSubSystem;
   }
 
   /**
@@ -145,10 +145,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ArchitectureView createArchitectureView()
+  public DCLArchitectureView createDCLArchitectureView()
   {
-    ArchitectureViewImpl architectureView = new ArchitectureViewImpl();
-    return architectureView;
+    DCLArchitectureViewImpl dclArchitectureView = new DCLArchitectureViewImpl();
+    return dclArchitectureView;
   }
 
   /**
@@ -156,10 +156,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SoftwareSystem createSoftwareSystem()
+  public DCLSoftwareSystem createDCLSoftwareSystem()
   {
-    SoftwareSystemImpl softwareSystem = new SoftwareSystemImpl();
-    return softwareSystem;
+    DCLSoftwareSystemImpl dclSoftwareSystem = new DCLSoftwareSystemImpl();
+    return dclSoftwareSystem;
   }
 
   /**
