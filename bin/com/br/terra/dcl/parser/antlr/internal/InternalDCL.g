@@ -190,21 +190,21 @@ ruleDCLStructureElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLArchitectureViewParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLModuleParserRuleCall_3()); 
     }
-    this_DCLArchitectureView_3=ruleDCLArchitectureView
+    this_DCLModule_3=ruleDCLModule
     { 
-        $current = $this_DCLArchitectureView_3.current; 
+        $current = $this_DCLModule_3.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLSoftwareSystemParserRuleCall_4()); 
+        newCompositeNode(grammarAccess.getDCLStructureElementAccess().getDCLComponentInterfaceParserRuleCall_4()); 
     }
-    this_DCLSoftwareSystem_4=ruleDCLSoftwareSystem
+    this_DCLComponentInterface_4=ruleDCLComponentInterface
     { 
-        $current = $this_DCLSoftwareSystem_4.current; 
+        $current = $this_DCLComponentInterface_4.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -250,9 +250,56 @@ ruleDCLLayer returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2=';' 
+)	otherlv_2=',' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getDCLLayerAccess().getSemicolonKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getDCLLayerAccess().getCommaKeyword_2());
+    }
+	otherlv_3='level' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLLayerAccess().getLevelKeyword_3());
+    }
+(
+(
+		lv_level_4_0=RULE_INT
+		{
+			newLeafNode(lv_level_4_0, grammarAccess.getDCLLayerAccess().getLevelINTTerminalRuleCall_4_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLLayerRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"level",
+        		lv_level_4_0, 
+        		"INT");
+	    }
+
+)
+)(	otherlv_5=',' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_0());
+    }
+	otherlv_6='inSubSystem: ' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getDCLLayerAccess().getInSubSystemKeyword_5_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLLayerRule());
+	        }
+        }
+	otherlv_7=RULE_ID
+	{
+		newLeafNode(otherlv_7, grammarAccess.getDCLLayerAccess().getSubSystemDCLStructureElementCrossReference_5_2_0()); 
+	}
+
+)
+))?	otherlv_8=';' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getDCLLayerAccess().getSemicolonKeyword_6());
     }
 )
 ;
@@ -297,10 +344,194 @@ ruleDCLComponent returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2=';' 
+)((	otherlv_2=',' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getDCLComponentAccess().getSemicolonKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getDCLComponentAccess().getCommaKeyword_2_0_0());
     }
+	otherlv_3='inLayer: ' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLComponentAccess().getInLayerKeyword_2_0_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLComponentRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLComponentAccess().getLayerDCLStructureElementCrossReference_2_0_2_0()); 
+	}
+
+)
+))
+    |(	otherlv_5=',' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLComponentAccess().getCommaKeyword_2_1_0());
+    }
+	otherlv_6='inSubSystem: ' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getDCLComponentAccess().getInSubSystemKeyword_2_1_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLComponentRule());
+	        }
+        }
+	otherlv_7=RULE_ID
+	{
+		newLeafNode(otherlv_7, grammarAccess.getDCLComponentAccess().getSubSystemDCLStructureElementCrossReference_2_1_2_0()); 
+	}
+
+)
+)))?	otherlv_8=';' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getDCLComponentAccess().getSemicolonKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleDCLComponentInterface
+entryRuleDCLComponentInterface returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getDCLComponentInterfaceRule()); }
+	 iv_ruleDCLComponentInterface=ruleDCLComponentInterface 
+	 { $current=$iv_ruleDCLComponentInterface.current; } 
+	 EOF 
+;
+
+// Rule DCLComponentInterface
+ruleDCLComponentInterface returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='interface' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getDCLComponentInterfaceAccess().getInterfaceKeyword_0());
+    }
+(
+(
+		lv_name_1_0=RULE_ID
+		{
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLComponentInterfaceAccess().getNameIDTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLComponentInterfaceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_1_0, 
+        		"ID");
+	    }
+
+)
+)	otherlv_2='ofComponent ' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getDCLComponentInterfaceAccess().getOfComponentKeyword_2());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLComponentInterfaceRule());
+	        }
+        }
+	otherlv_3=RULE_ID
+	{
+		newLeafNode(otherlv_3, grammarAccess.getDCLComponentInterfaceAccess().getComponentDCLStructureElementCrossReference_3_0()); 
+	}
+
+)
+)(	otherlv_4=',' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getDCLComponentInterfaceAccess().getCommaKeyword_4_0());
+    }
+	otherlv_5='type: ' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLComponentInterfaceAccess().getTypeKeyword_4_1());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getDCLComponentInterfaceAccess().getInterfaceTypeInterfaceTypeParserRuleCall_4_2_0()); 
+	    }
+		lv_interfaceType_6_0=ruleInterfaceType		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getDCLComponentInterfaceRule());
+	        }
+       		set(
+       			$current, 
+       			"interfaceType",
+        		lv_interfaceType_6_0, 
+        		"InterfaceType");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))	otherlv_7=';' 
+    {
+    	newLeafNode(otherlv_7, grammarAccess.getDCLComponentInterfaceAccess().getSemicolonKeyword_5());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleInterfaceType
+entryRuleInterfaceType returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getInterfaceTypeRule()); }
+	 iv_ruleInterfaceType=ruleInterfaceType 
+	 { $current=$iv_ruleInterfaceType.current; } 
+	 EOF 
+;
+
+// Rule InterfaceType
+ruleInterfaceType returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+(
+(
+		lv_interfaceTypeName_0_1=	'provided' 
+    {
+        newLeafNode(lv_interfaceTypeName_0_1, grammarAccess.getInterfaceTypeAccess().getInterfaceTypeNameProvidedKeyword_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getInterfaceTypeRule());
+	        }
+       		setWithLastConsumed($current, "interfaceTypeName", lv_interfaceTypeName_0_1, null);
+	    }
+
+    |		lv_interfaceTypeName_0_2=	'required' 
+    {
+        newLeafNode(lv_interfaceTypeName_0_2, grammarAccess.getInterfaceTypeAccess().getInterfaceTypeNameRequiredKeyword_0_1());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getInterfaceTypeRule());
+	        }
+       		setWithLastConsumed($current, "interfaceTypeName", lv_interfaceTypeName_0_2, null);
+	    }
+
+)
+
+)
 )
 ;
 
@@ -355,33 +586,33 @@ ruleDCLSubSystem returns [EObject current=null]
 
 
 
-// Entry rule entryRuleDCLArchitectureView
-entryRuleDCLArchitectureView returns [EObject current=null] 
+// Entry rule entryRuleDCLModule
+entryRuleDCLModule returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getDCLArchitectureViewRule()); }
-	 iv_ruleDCLArchitectureView=ruleDCLArchitectureView 
-	 { $current=$iv_ruleDCLArchitectureView.current; } 
+	{ newCompositeNode(grammarAccess.getDCLModuleRule()); }
+	 iv_ruleDCLModule=ruleDCLModule 
+	 { $current=$iv_ruleDCLModule.current; } 
 	 EOF 
 ;
 
-// Rule DCLArchitectureView
-ruleDCLArchitectureView returns [EObject current=null] 
+// Rule DCLModule
+ruleDCLModule returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='architectureView' 
+(	otherlv_0='module' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getDCLArchitectureViewAccess().getArchitectureViewKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getDCLModuleAccess().getModuleKeyword_0());
     }
 (
 (
 		lv_name_1_0=RULE_ID
 		{
-			newLeafNode(lv_name_1_0, grammarAccess.getDCLArchitectureViewAccess().getNameIDTerminalRuleCall_1_0()); 
+			newLeafNode(lv_name_1_0, grammarAccess.getDCLModuleAccess().getNameIDTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getDCLArchitectureViewRule());
+	            $current = createModelElement(grammarAccess.getDCLModuleRule());
 	        }
        		setWithLastConsumed(
        			$current, 
@@ -393,54 +624,7 @@ ruleDCLArchitectureView returns [EObject current=null]
 )
 )	otherlv_2=';' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getDCLArchitectureViewAccess().getSemicolonKeyword_2());
-    }
-)
-;
-
-
-
-
-
-// Entry rule entryRuleDCLSoftwareSystem
-entryRuleDCLSoftwareSystem returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getDCLSoftwareSystemRule()); }
-	 iv_ruleDCLSoftwareSystem=ruleDCLSoftwareSystem 
-	 { $current=$iv_ruleDCLSoftwareSystem.current; } 
-	 EOF 
-;
-
-// Rule DCLSoftwareSystem
-ruleDCLSoftwareSystem returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(	otherlv_0='softwareSystem' 
-    {
-    	newLeafNode(otherlv_0, grammarAccess.getDCLSoftwareSystemAccess().getSoftwareSystemKeyword_0());
-    }
-(
-(
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getDCLSoftwareSystemAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getDCLSoftwareSystemRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_1_0, 
-        		"ID");
-	    }
-
-)
-)	otherlv_2=';' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getDCLSoftwareSystemAccess().getSemicolonKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getDCLModuleAccess().getSemicolonKeyword_2());
     }
 )
 ;
@@ -1145,9 +1329,9 @@ ruleEntityType returns [EObject current=null]
        		setWithLastConsumed($current, "entity", lv_entity_0_4, null);
 	    }
 
-    |		lv_entity_0_5=	'annotated' 
+    |		lv_entity_0_5=	'useannotation' 
     {
-        newLeafNode(lv_entity_0_5, grammarAccess.getEntityTypeAccess().getEntityAnnotatedKeyword_0_4());
+        newLeafNode(lv_entity_0_5, grammarAccess.getEntityTypeAccess().getEntityUseannotationKeyword_0_4());
     }
  
 	    {

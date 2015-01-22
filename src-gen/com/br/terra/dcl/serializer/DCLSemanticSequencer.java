@@ -4,13 +4,14 @@ import com.br.terra.dcl.dCL.BasicType;
 import com.br.terra.dcl.dCL.Can;
 import com.br.terra.dcl.dCL.Cannot;
 import com.br.terra.dcl.dCL.DCDecl;
-import com.br.terra.dcl.dCL.DCLArchitectureView;
 import com.br.terra.dcl.dCL.DCLComponent;
+import com.br.terra.dcl.dCL.DCLComponentInterface;
 import com.br.terra.dcl.dCL.DCLLayer;
+import com.br.terra.dcl.dCL.DCLModule;
 import com.br.terra.dcl.dCL.DCLPackage;
-import com.br.terra.dcl.dCL.DCLSoftwareSystem;
 import com.br.terra.dcl.dCL.DCLSubSystem;
 import com.br.terra.dcl.dCL.EntityType;
+import com.br.terra.dcl.dCL.InterfaceType;
 import com.br.terra.dcl.dCL.Model;
 import com.br.terra.dcl.dCL.Must;
 import com.br.terra.dcl.dCL.Only;
@@ -63,17 +64,17 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case DCLPackage.DCL_ARCHITECTURE_VIEW:
-				if(context == grammarAccess.getDCLArchitectureViewRule() ||
-				   context == grammarAccess.getDCLStructureElementRule()) {
-					sequence_DCLArchitectureView(context, (DCLArchitectureView) semanticObject); 
-					return; 
-				}
-				else break;
 			case DCLPackage.DCL_COMPONENT:
 				if(context == grammarAccess.getDCLComponentRule() ||
 				   context == grammarAccess.getDCLStructureElementRule()) {
 					sequence_DCLComponent(context, (DCLComponent) semanticObject); 
+					return; 
+				}
+				else break;
+			case DCLPackage.DCL_COMPONENT_INTERFACE:
+				if(context == grammarAccess.getDCLComponentInterfaceRule() ||
+				   context == grammarAccess.getDCLStructureElementRule()) {
+					sequence_DCLComponentInterface(context, (DCLComponentInterface) semanticObject); 
 					return; 
 				}
 				else break;
@@ -84,10 +85,10 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case DCLPackage.DCL_SOFTWARE_SYSTEM:
-				if(context == grammarAccess.getDCLSoftwareSystemRule() ||
+			case DCLPackage.DCL_MODULE:
+				if(context == grammarAccess.getDCLModuleRule() ||
 				   context == grammarAccess.getDCLStructureElementRule()) {
-					sequence_DCLSoftwareSystem(context, (DCLSoftwareSystem) semanticObject); 
+					sequence_DCLModule(context, (DCLModule) semanticObject); 
 					return; 
 				}
 				else break;
@@ -102,6 +103,12 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getElementTypeRule() ||
 				   context == grammarAccess.getEntityTypeRule()) {
 					sequence_EntityType(context, (EntityType) semanticObject); 
+					return; 
+				}
+				else break;
+			case DCLPackage.INTERFACE_TYPE:
+				if(context == grammarAccess.getInterfaceTypeRule()) {
+					sequence_InterfaceType(context, (InterfaceType) semanticObject); 
 					return; 
 				}
 				else break;
@@ -190,49 +197,41 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID component=[DCLStructureElement|ID] interfaceType=InterfaceType)
 	 */
-	protected void sequence_DCLArchitectureView(EObject context, DCLArchitectureView semanticObject) {
+	protected void sequence_DCLComponentInterface(EObject context, DCLComponentInterface semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME));
+			if(transientValues.isValueTransient(semanticObject, DCLPackage.Literals.DCL_COMPONENT_INTERFACE__COMPONENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DCLPackage.Literals.DCL_COMPONENT_INTERFACE__COMPONENT));
+			if(transientValues.isValueTransient(semanticObject, DCLPackage.Literals.DCL_COMPONENT_INTERFACE__INTERFACE_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DCLPackage.Literals.DCL_COMPONENT_INTERFACE__INTERFACE_TYPE));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDCLArchitectureViewAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDCLComponentInterfaceAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDCLComponentInterfaceAccess().getComponentDCLStructureElementIDTerminalRuleCall_3_0_1(), semanticObject.getComponent());
+		feeder.accept(grammarAccess.getDCLComponentInterfaceAccess().getInterfaceTypeInterfaceTypeParserRuleCall_4_2_0(), semanticObject.getInterfaceType());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID (layer=[DCLStructureElement|ID] | subSystem=[DCLStructureElement|ID])?)
 	 */
 	protected void sequence_DCLComponent(EObject context, DCLComponent semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDCLComponentAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=ID level=INT subSystem=[DCLStructureElement|ID]?)
 	 */
 	protected void sequence_DCLLayer(EObject context, DCLLayer semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDCLLayerAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -240,14 +239,14 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     name=ID
 	 */
-	protected void sequence_DCLSoftwareSystem(EObject context, DCLSoftwareSystem semanticObject) {
+	protected void sequence_DCLModule(EObject context, DCLModule semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, DCLPackage.Literals.DCL_STRUCTURE_ELEMENT__NAME));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getDCLSoftwareSystemAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDCLModuleAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -270,9 +269,18 @@ public class DCLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (entity='extend' | entity='implement' | entity='derive' | entity='throw' | entity='annotated')
+	 *     (entity='extend' | entity='implement' | entity='derive' | entity='throw' | entity='useannotation')
 	 */
 	protected void sequence_EntityType(EObject context, EntityType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (interfaceTypeName='provided' | interfaceTypeName='required')
+	 */
+	protected void sequence_InterfaceType(EObject context, InterfaceType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

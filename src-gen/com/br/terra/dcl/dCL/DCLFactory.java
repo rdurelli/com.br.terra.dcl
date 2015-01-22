@@ -59,6 +59,24 @@ public interface DCLFactory extends EFactory
   DCLComponent createDCLComponent();
 
   /**
+   * Returns a new object of class '<em>Component Interface</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Component Interface</em>'.
+   * @generated
+   */
+  DCLComponentInterface createDCLComponentInterface();
+
+  /**
+   * Returns a new object of class '<em>Interface Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Interface Type</em>'.
+   * @generated
+   */
+  InterfaceType createInterfaceType();
+
+  /**
    * Returns a new object of class '<em>Sub System</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -68,22 +86,13 @@ public interface DCLFactory extends EFactory
   DCLSubSystem createDCLSubSystem();
 
   /**
-   * Returns a new object of class '<em>Architecture View</em>'.
+   * Returns a new object of class '<em>Module</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Architecture View</em>'.
+   * @return a new object of class '<em>Module</em>'.
    * @generated
    */
-  DCLArchitectureView createDCLArchitectureView();
-
-  /**
-   * Returns a new object of class '<em>Software System</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Software System</em>'.
-   * @generated
-   */
-  DCLSoftwareSystem createDCLSoftwareSystem();
+  DCLModule createDCLModule();
 
   /**
    * Returns a new object of class '<em>DC Decl</em>'.

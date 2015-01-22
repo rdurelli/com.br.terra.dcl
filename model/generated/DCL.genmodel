@@ -14,11 +14,23 @@
     <genClasses ecoreClass="DCL.ecore#//DCLStructureElement">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//DCLStructureElement/name"/>
     </genClasses>
-    <genClasses ecoreClass="DCL.ecore#//DCLLayer"/>
-    <genClasses ecoreClass="DCL.ecore#//DCLComponent"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLLayer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//DCLLayer/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLLayer/subSystem"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLComponent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponent/layer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponent/subSystem"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//DCLComponentInterface">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponentInterface/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponentInterface/interfaceType"/>
+    </genClasses>
+    <genClasses ecoreClass="DCL.ecore#//InterfaceType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//InterfaceType/interfaceTypeName"/>
+    </genClasses>
     <genClasses ecoreClass="DCL.ecore#//DCLSubSystem"/>
-    <genClasses ecoreClass="DCL.ecore#//DCLArchitectureView"/>
-    <genClasses ecoreClass="DCL.ecore#//DCLSoftwareSystem"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLModule"/>
     <genClasses ecoreClass="DCL.ecore#//DCDecl">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/only"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/t"/>

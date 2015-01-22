@@ -68,9 +68,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
       case DCLPackage.DCL_STRUCTURE_ELEMENT: return createDCLStructureElement();
       case DCLPackage.DCL_LAYER: return createDCLLayer();
       case DCLPackage.DCL_COMPONENT: return createDCLComponent();
+      case DCLPackage.DCL_COMPONENT_INTERFACE: return createDCLComponentInterface();
+      case DCLPackage.INTERFACE_TYPE: return createInterfaceType();
       case DCLPackage.DCL_SUB_SYSTEM: return createDCLSubSystem();
-      case DCLPackage.DCL_ARCHITECTURE_VIEW: return createDCLArchitectureView();
-      case DCLPackage.DCL_SOFTWARE_SYSTEM: return createDCLSoftwareSystem();
+      case DCLPackage.DCL_MODULE: return createDCLModule();
       case DCLPackage.DC_DECL: return createDCDecl();
       case DCLPackage.ONLY: return createOnly();
       case DCLPackage.CAN: return createCan();
@@ -134,6 +135,28 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
+  public DCLComponentInterface createDCLComponentInterface()
+  {
+    DCLComponentInterfaceImpl dclComponentInterface = new DCLComponentInterfaceImpl();
+    return dclComponentInterface;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InterfaceType createInterfaceType()
+  {
+    InterfaceTypeImpl interfaceType = new InterfaceTypeImpl();
+    return interfaceType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DCLSubSystem createDCLSubSystem()
   {
     DCLSubSystemImpl dclSubSystem = new DCLSubSystemImpl();
@@ -145,21 +168,10 @@ public class DCLFactoryImpl extends EFactoryImpl implements DCLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public DCLArchitectureView createDCLArchitectureView()
+  public DCLModule createDCLModule()
   {
-    DCLArchitectureViewImpl dclArchitectureView = new DCLArchitectureViewImpl();
-    return dclArchitectureView;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public DCLSoftwareSystem createDCLSoftwareSystem()
-  {
-    DCLSoftwareSystemImpl dclSoftwareSystem = new DCLSoftwareSystemImpl();
-    return dclSoftwareSystem;
+    DCLModuleImpl dclModule = new DCLModuleImpl();
+    return dclModule;
   }
 
   /**

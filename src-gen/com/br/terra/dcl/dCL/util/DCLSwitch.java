@@ -102,6 +102,21 @@ public class DCLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case DCLPackage.DCL_COMPONENT_INTERFACE:
+      {
+        DCLComponentInterface dclComponentInterface = (DCLComponentInterface)theEObject;
+        T result = caseDCLComponentInterface(dclComponentInterface);
+        if (result == null) result = caseDCLStructureElement(dclComponentInterface);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case DCLPackage.INTERFACE_TYPE:
+      {
+        InterfaceType interfaceType = (InterfaceType)theEObject;
+        T result = caseInterfaceType(interfaceType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case DCLPackage.DCL_SUB_SYSTEM:
       {
         DCLSubSystem dclSubSystem = (DCLSubSystem)theEObject;
@@ -110,19 +125,11 @@ public class DCLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case DCLPackage.DCL_ARCHITECTURE_VIEW:
+      case DCLPackage.DCL_MODULE:
       {
-        DCLArchitectureView dclArchitectureView = (DCLArchitectureView)theEObject;
-        T result = caseDCLArchitectureView(dclArchitectureView);
-        if (result == null) result = caseDCLStructureElement(dclArchitectureView);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case DCLPackage.DCL_SOFTWARE_SYSTEM:
-      {
-        DCLSoftwareSystem dclSoftwareSystem = (DCLSoftwareSystem)theEObject;
-        T result = caseDCLSoftwareSystem(dclSoftwareSystem);
-        if (result == null) result = caseDCLStructureElement(dclSoftwareSystem);
+        DCLModule dclModule = (DCLModule)theEObject;
+        T result = caseDCLModule(dclModule);
+        if (result == null) result = caseDCLStructureElement(dclModule);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -260,6 +267,38 @@ public class DCLSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Component Interface</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Component Interface</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDCLComponentInterface(DCLComponentInterface object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Interface Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Interface Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInterfaceType(InterfaceType object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Sub System</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -276,33 +315,17 @@ public class DCLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Architecture View</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Module</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Architecture View</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Module</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDCLArchitectureView(DCLArchitectureView object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Software System</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Software System</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDCLSoftwareSystem(DCLSoftwareSystem object)
+  public T caseDCLModule(DCLModule object)
   {
     return null;
   }

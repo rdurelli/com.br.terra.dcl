@@ -95,19 +95,24 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
         return createDCLComponentAdapter();
       }
       @Override
+      public Adapter caseDCLComponentInterface(DCLComponentInterface object)
+      {
+        return createDCLComponentInterfaceAdapter();
+      }
+      @Override
+      public Adapter caseInterfaceType(InterfaceType object)
+      {
+        return createInterfaceTypeAdapter();
+      }
+      @Override
       public Adapter caseDCLSubSystem(DCLSubSystem object)
       {
         return createDCLSubSystemAdapter();
       }
       @Override
-      public Adapter caseDCLArchitectureView(DCLArchitectureView object)
+      public Adapter caseDCLModule(DCLModule object)
       {
-        return createDCLArchitectureViewAdapter();
-      }
-      @Override
-      public Adapter caseDCLSoftwareSystem(DCLSoftwareSystem object)
-      {
-        return createDCLSoftwareSystemAdapter();
+        return createDCLModuleAdapter();
       }
       @Override
       public Adapter caseDCDecl(DCDecl object)
@@ -237,6 +242,36 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLComponentInterface <em>Component Interface</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.DCLComponentInterface
+   * @generated
+   */
+  public Adapter createDCLComponentInterfaceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.InterfaceType <em>Interface Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.br.terra.dcl.dCL.InterfaceType
+   * @generated
+   */
+  public Adapter createInterfaceTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLSubSystem <em>Sub System</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -252,31 +287,16 @@ public class DCLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLArchitectureView <em>Architecture View</em>}'.
+   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLModule <em>Module</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.DCLArchitectureView
+   * @see com.br.terra.dcl.dCL.DCLModule
    * @generated
    */
-  public Adapter createDCLArchitectureViewAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link com.br.terra.dcl.dCL.DCLSoftwareSystem <em>Software System</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see com.br.terra.dcl.dCL.DCLSoftwareSystem
-   * @generated
-   */
-  public Adapter createDCLSoftwareSystemAdapter()
+  public Adapter createDCLModuleAdapter()
   {
     return null;
   }

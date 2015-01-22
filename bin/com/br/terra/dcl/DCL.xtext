@@ -6,24 +6,28 @@ Model:
 	  'architeturalElements' '{' structureElements += DCLStructureElement+ '}'
 	  'restrictions' '{' (dCDecl += DCDecl*) '}';
  
- DCLStructureElement: DCLLayer | DCLComponent | DCLSubSystem | DCLArchitectureView | DCLSoftwareSystem;
+ DCLStructureElement: DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface;
  
  DCLLayer:
- 	'layer' name=ID ';';
+ 	'layer' name=ID ',' 'level' level=INT (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';' ;
  
  DCLComponent:
- 	'component' name=ID ';';
+'component' name=ID ((',' 'inLayer: ' layer=[DCLStructureElement]) | (',''inSubSystem: ' subSystem=[DCLStructureElement]))? ';';
  	
+ DCLComponentInterface:
+ 	'interface' name=ID 'ofComponent ' component=[DCLStructureElement] (',' 'type: ' interfaceType=InterfaceType ) ';'
+ ;
+ 
+ InterfaceType:
+ 	interfaceTypeName = ('provided' | 'required')
+ ;
+ 
  DCLSubSystem:
  	'subSystem' name=ID ';'
  ;
  
- DCLArchitectureView:
- 	'architectureView' name=ID ';'
- ;
- 
- DCLSoftwareSystem:
- 	'softwareSystem' name=ID ';'
+ DCLModule:
+ 	'module' name=ID ';'
  ;
  
  DCDecl: (only=Only t=[DCLStructureElement] can=Can elementType=ElementType type = [DCLStructureElement] ';') | 
@@ -57,4 +61,4 @@ Model:
  BasicType:
      	typeName= ('access' | 'declare' | 'handle' | 'create' | 'depend');
      
-EntityType: entity=('extend' | 'implement' | 'derive' | 'throw' | 'annotated');
+EntityType: entity=('extend' | 'implement' | 'derive' | 'throw' | 'useannotation');

@@ -10,11 +10,24 @@
   <eClassifiers xsi:type="ecore:EClass" name="DCLStructureElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DCLLayer" eSuperTypes="#//DCLStructureElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DCLComponent" eSuperTypes="#//DCLStructureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLLayer" eSuperTypes="#//DCLStructureElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subSystem" eType="#//DCLStructureElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLComponent" eSuperTypes="#//DCLStructureElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="layer" eType="#//DCLStructureElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subSystem" eType="#//DCLStructureElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLComponentInterface" eSuperTypes="#//DCLStructureElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="#//DCLStructureElement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceType" eType="#//InterfaceType"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="interfaceTypeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DCLSubSystem" eSuperTypes="#//DCLStructureElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DCLArchitectureView" eSuperTypes="#//DCLStructureElement"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DCLSoftwareSystem" eSuperTypes="#//DCLStructureElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DCLModule" eSuperTypes="#//DCLStructureElement"/>
   <eClassifiers xsi:type="ecore:EClass" name="DCDecl">
     <eStructuralFeatures xsi:type="ecore:EReference" name="only" eType="#//Only" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="t" eType="#//DCLStructureElement"/>
