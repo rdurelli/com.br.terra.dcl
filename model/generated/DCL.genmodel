@@ -16,7 +16,9 @@
     </genClasses>
     <genClasses ecoreClass="DCL.ecore#//DCLLayer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//DCLLayer/level"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLLayer/layer"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLLayer/subSystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLLayer/component"/>
     </genClasses>
     <genClasses ecoreClass="DCL.ecore#//DCLComponent">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLComponent/layer"/>
@@ -29,7 +31,9 @@
     <genClasses ecoreClass="DCL.ecore#//InterfaceType">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute DCL.ecore#//InterfaceType/interfaceTypeName"/>
     </genClasses>
-    <genClasses ecoreClass="DCL.ecore#//DCLSubSystem"/>
+    <genClasses ecoreClass="DCL.ecore#//DCLSubSystem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference DCL.ecore#//DCLSubSystem/subSystem"/>
+    </genClasses>
     <genClasses ecoreClass="DCL.ecore#//DCLModule"/>
     <genClasses ecoreClass="DCL.ecore#//DCDecl">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference DCL.ecore#//DCDecl/only"/>

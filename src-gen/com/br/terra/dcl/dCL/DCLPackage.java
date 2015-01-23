@@ -150,13 +150,31 @@ public interface DCLPackage extends EPackage
   int DCL_LAYER__LEVEL = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Layer</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_LAYER__LAYER = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Sub System</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DCL_LAYER__SUB_SYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
+  int DCL_LAYER__SUB_SYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Component</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_LAYER__COMPONENT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Layer</em>' class.
@@ -165,7 +183,7 @@ public interface DCLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DCL_LAYER_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 2;
+  int DCL_LAYER_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLComponentImpl <em>Component</em>}' class.
@@ -307,13 +325,22 @@ public interface DCLPackage extends EPackage
   int DCL_SUB_SYSTEM__NAME = DCL_STRUCTURE_ELEMENT__NAME;
 
   /**
+   * The feature id for the '<em><b>Sub System</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DCL_SUB_SYSTEM__SUB_SYSTEM = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Sub System</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DCL_SUB_SYSTEM_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 0;
+  int DCL_SUB_SYSTEM_FEATURE_COUNT = DCL_STRUCTURE_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link com.br.terra.dcl.dCL.impl.DCLModuleImpl <em>Module</em>}' class.
@@ -734,6 +761,17 @@ public interface DCLPackage extends EPackage
   EAttribute getDCLLayer_Level();
 
   /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLLayer#getLayer <em>Layer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Layer</em>'.
+   * @see com.br.terra.dcl.dCL.DCLLayer#getLayer()
+   * @see #getDCLLayer()
+   * @generated
+   */
+  EReference getDCLLayer_Layer();
+
+  /**
    * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLLayer#getSubSystem <em>Sub System</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -743,6 +781,17 @@ public interface DCLPackage extends EPackage
    * @generated
    */
   EReference getDCLLayer_SubSystem();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLLayer#getComponent <em>Component</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Component</em>'.
+   * @see com.br.terra.dcl.dCL.DCLLayer#getComponent()
+   * @see #getDCLLayer()
+   * @generated
+   */
+  EReference getDCLLayer_Component();
 
   /**
    * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLComponent <em>Component</em>}'.
@@ -838,6 +887,17 @@ public interface DCLPackage extends EPackage
    * @generated
    */
   EClass getDCLSubSystem();
+
+  /**
+   * Returns the meta object for the reference '{@link com.br.terra.dcl.dCL.DCLSubSystem#getSubSystem <em>Sub System</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Sub System</em>'.
+   * @see com.br.terra.dcl.dCL.DCLSubSystem#getSubSystem()
+   * @see #getDCLSubSystem()
+   * @generated
+   */
+  EReference getDCLSubSystem_SubSystem();
 
   /**
    * Returns the meta object for class '{@link com.br.terra.dcl.dCL.DCLModule <em>Module</em>}'.
@@ -1201,12 +1261,28 @@ public interface DCLPackage extends EPackage
     EAttribute DCL_LAYER__LEVEL = eINSTANCE.getDCLLayer_Level();
 
     /**
+     * The meta object literal for the '<em><b>Layer</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_LAYER__LAYER = eINSTANCE.getDCLLayer_Layer();
+
+    /**
      * The meta object literal for the '<em><b>Sub System</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference DCL_LAYER__SUB_SYSTEM = eINSTANCE.getDCLLayer_SubSystem();
+
+    /**
+     * The meta object literal for the '<em><b>Component</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_LAYER__COMPONENT = eINSTANCE.getDCLLayer_Component();
 
     /**
      * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLComponentImpl <em>Component</em>}' class.
@@ -1287,6 +1363,14 @@ public interface DCLPackage extends EPackage
      * @generated
      */
     EClass DCL_SUB_SYSTEM = eINSTANCE.getDCLSubSystem();
+
+    /**
+     * The meta object literal for the '<em><b>Sub System</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DCL_SUB_SYSTEM__SUB_SYSTEM = eINSTANCE.getDCLSubSystem_SubSystem();
 
     /**
      * The meta object literal for the '{@link com.br.terra.dcl.dCL.impl.DCLModuleImpl <em>Module</em>}' class.

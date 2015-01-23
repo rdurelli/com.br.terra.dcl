@@ -112,19 +112,34 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLevelKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cLevelAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cLevelINTTerminalRuleCall_4_0 = (RuleCall)cLevelAssignment_4.eContents().get(0);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cCommaKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Keyword cInSubSystemKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final Assignment cSubSystemAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final CrossReference cSubSystemDCLStructureElementCrossReference_5_2_0 = (CrossReference)cSubSystemAssignment_5_2.eContents().get(0);
-		private final RuleCall cSubSystemDCLStructureElementIDTerminalRuleCall_5_2_0_1 = (RuleCall)cSubSystemDCLStructureElementCrossReference_5_2_0.eContents().get(1);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final Group cGroup_5_0 = (Group)cAlternatives_5.eContents().get(0);
+		private final Keyword cCommaKeyword_5_0_0 = (Keyword)cGroup_5_0.eContents().get(0);
+		private final Keyword cInLayerKeyword_5_0_1 = (Keyword)cGroup_5_0.eContents().get(1);
+		private final Assignment cLayerAssignment_5_0_2 = (Assignment)cGroup_5_0.eContents().get(2);
+		private final CrossReference cLayerDCLStructureElementCrossReference_5_0_2_0 = (CrossReference)cLayerAssignment_5_0_2.eContents().get(0);
+		private final RuleCall cLayerDCLStructureElementIDTerminalRuleCall_5_0_2_0_1 = (RuleCall)cLayerDCLStructureElementCrossReference_5_0_2_0.eContents().get(1);
+		private final Group cGroup_5_1 = (Group)cAlternatives_5.eContents().get(1);
+		private final Keyword cCommaKeyword_5_1_0 = (Keyword)cGroup_5_1.eContents().get(0);
+		private final Keyword cInSubSystemKeyword_5_1_1 = (Keyword)cGroup_5_1.eContents().get(1);
+		private final Assignment cSubSystemAssignment_5_1_2 = (Assignment)cGroup_5_1.eContents().get(2);
+		private final CrossReference cSubSystemDCLStructureElementCrossReference_5_1_2_0 = (CrossReference)cSubSystemAssignment_5_1_2.eContents().get(0);
+		private final RuleCall cSubSystemDCLStructureElementIDTerminalRuleCall_5_1_2_0_1 = (RuleCall)cSubSystemDCLStructureElementCrossReference_5_1_2_0.eContents().get(1);
+		private final Group cGroup_5_2 = (Group)cAlternatives_5.eContents().get(2);
+		private final Keyword cCommaKeyword_5_2_0 = (Keyword)cGroup_5_2.eContents().get(0);
+		private final Keyword cInComponentKeyword_5_2_1 = (Keyword)cGroup_5_2.eContents().get(1);
+		private final Assignment cComponentAssignment_5_2_2 = (Assignment)cGroup_5_2.eContents().get(2);
+		private final CrossReference cComponentDCLStructureElementCrossReference_5_2_2_0 = (CrossReference)cComponentAssignment_5_2_2.eContents().get(0);
+		private final RuleCall cComponentDCLStructureElementIDTerminalRuleCall_5_2_2_0_1 = (RuleCall)cComponentDCLStructureElementCrossReference_5_2_2_0.eContents().get(1);
 		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DCLLayer:
-		//	"layer" name=ID "," "level" level=INT ("," "inSubSystem: " subSystem=[DCLStructureElement])? ";";
+		//	"layer" name=ID "," "level" level=INT ("," "inLayer: " layer=[DCLStructureElement] | "," "inSubSystem: "
+		//	subSystem=[DCLStructureElement] | "," "inComponent: " component=[DCLStructureElement])? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"layer" name=ID "," "level" level=INT ("," "inSubSystem: " subSystem=[DCLStructureElement])? ";"
+		//"layer" name=ID "," "level" level=INT ("," "inLayer: " layer=[DCLStructureElement] | "," "inSubSystem: "
+		//subSystem=[DCLStructureElement] | "," "inComponent: " component=[DCLStructureElement])? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"layer"
@@ -148,23 +163,63 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getLevelINTTerminalRuleCall_4_0() { return cLevelINTTerminalRuleCall_4_0; }
 
-		//("," "inSubSystem: " subSystem=[DCLStructureElement])?
-		public Group getGroup_5() { return cGroup_5; }
+		//("," "inLayer: " layer=[DCLStructureElement] | "," "inSubSystem: " subSystem=[DCLStructureElement] | "," "inComponent: "
+		//component=[DCLStructureElement])?
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
+
+		//"," "inLayer: " layer=[DCLStructureElement]
+		public Group getGroup_5_0() { return cGroup_5_0; }
 
 		//","
-		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
+		public Keyword getCommaKeyword_5_0_0() { return cCommaKeyword_5_0_0; }
 
-		//"inSubSystem: "
-		public Keyword getInSubSystemKeyword_5_1() { return cInSubSystemKeyword_5_1; }
+		//"inLayer: "
+		public Keyword getInLayerKeyword_5_0_1() { return cInLayerKeyword_5_0_1; }
 
-		//subSystem=[DCLStructureElement]
-		public Assignment getSubSystemAssignment_5_2() { return cSubSystemAssignment_5_2; }
+		//layer=[DCLStructureElement]
+		public Assignment getLayerAssignment_5_0_2() { return cLayerAssignment_5_0_2; }
 
 		//[DCLStructureElement]
-		public CrossReference getSubSystemDCLStructureElementCrossReference_5_2_0() { return cSubSystemDCLStructureElementCrossReference_5_2_0; }
+		public CrossReference getLayerDCLStructureElementCrossReference_5_0_2_0() { return cLayerDCLStructureElementCrossReference_5_0_2_0; }
 
 		//ID
-		public RuleCall getSubSystemDCLStructureElementIDTerminalRuleCall_5_2_0_1() { return cSubSystemDCLStructureElementIDTerminalRuleCall_5_2_0_1; }
+		public RuleCall getLayerDCLStructureElementIDTerminalRuleCall_5_0_2_0_1() { return cLayerDCLStructureElementIDTerminalRuleCall_5_0_2_0_1; }
+
+		//"," "inSubSystem: " subSystem=[DCLStructureElement]
+		public Group getGroup_5_1() { return cGroup_5_1; }
+
+		//","
+		public Keyword getCommaKeyword_5_1_0() { return cCommaKeyword_5_1_0; }
+
+		//"inSubSystem: "
+		public Keyword getInSubSystemKeyword_5_1_1() { return cInSubSystemKeyword_5_1_1; }
+
+		//subSystem=[DCLStructureElement]
+		public Assignment getSubSystemAssignment_5_1_2() { return cSubSystemAssignment_5_1_2; }
+
+		//[DCLStructureElement]
+		public CrossReference getSubSystemDCLStructureElementCrossReference_5_1_2_0() { return cSubSystemDCLStructureElementCrossReference_5_1_2_0; }
+
+		//ID
+		public RuleCall getSubSystemDCLStructureElementIDTerminalRuleCall_5_1_2_0_1() { return cSubSystemDCLStructureElementIDTerminalRuleCall_5_1_2_0_1; }
+
+		//"," "inComponent: " component=[DCLStructureElement]
+		public Group getGroup_5_2() { return cGroup_5_2; }
+
+		//","
+		public Keyword getCommaKeyword_5_2_0() { return cCommaKeyword_5_2_0; }
+
+		//"inComponent: "
+		public Keyword getInComponentKeyword_5_2_1() { return cInComponentKeyword_5_2_1; }
+
+		//component=[DCLStructureElement]
+		public Assignment getComponentAssignment_5_2_2() { return cComponentAssignment_5_2_2; }
+
+		//[DCLStructureElement]
+		public CrossReference getComponentDCLStructureElementCrossReference_5_2_2_0() { return cComponentDCLStructureElementCrossReference_5_2_2_0; }
+
+		//ID
+		public RuleCall getComponentDCLStructureElementIDTerminalRuleCall_5_2_2_0_1() { return cComponentDCLStructureElementIDTerminalRuleCall_5_2_2_0_1; }
 
 		//";"
 		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
@@ -346,13 +401,19 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSubSystemKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cSemicolonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cCommaKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cInSubSystemKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cSubSystemAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cSubSystemDCLStructureElementCrossReference_2_2_0 = (CrossReference)cSubSystemAssignment_2_2.eContents().get(0);
+		private final RuleCall cSubSystemDCLStructureElementIDTerminalRuleCall_2_2_0_1 = (RuleCall)cSubSystemDCLStructureElementCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//DCLSubSystem:
-		//	"subSystem" name=ID ";";
+		//	"subSystem" name=ID ("," "inSubSystem: " subSystem=[DCLStructureElement])? ";";
 		public ParserRule getRule() { return rule; }
 
-		//"subSystem" name=ID ";"
+		//"subSystem" name=ID ("," "inSubSystem: " subSystem=[DCLStructureElement])? ";"
 		public Group getGroup() { return cGroup; }
 
 		//"subSystem"
@@ -364,8 +425,26 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 
+		//("," "inSubSystem: " subSystem=[DCLStructureElement])?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//","
+		public Keyword getCommaKeyword_2_0() { return cCommaKeyword_2_0; }
+
+		//"inSubSystem: "
+		public Keyword getInSubSystemKeyword_2_1() { return cInSubSystemKeyword_2_1; }
+
+		//subSystem=[DCLStructureElement]
+		public Assignment getSubSystemAssignment_2_2() { return cSubSystemAssignment_2_2; }
+
+		//[DCLStructureElement]
+		public CrossReference getSubSystemDCLStructureElementCrossReference_2_2_0() { return cSubSystemDCLStructureElementCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getSubSystemDCLStructureElementIDTerminalRuleCall_2_2_0_1() { return cSubSystemDCLStructureElementIDTerminalRuleCall_2_2_0_1; }
+
 		//";"
-		public Keyword getSemicolonKeyword_2() { return cSemicolonKeyword_2; }
+		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
 	}
 
 	public class DCLModuleElements extends AbstractParserRuleElementFinder {
@@ -889,7 +968,8 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DCLLayer:
-	//	"layer" name=ID "," "level" level=INT ("," "inSubSystem: " subSystem=[DCLStructureElement])? ";";
+	//	"layer" name=ID "," "level" level=INT ("," "inLayer: " layer=[DCLStructureElement] | "," "inSubSystem: "
+	//	subSystem=[DCLStructureElement] | "," "inComponent: " component=[DCLStructureElement])? ";";
 	public DCLLayerElements getDCLLayerAccess() {
 		return pDCLLayer;
 	}
@@ -930,7 +1010,7 @@ public class DCLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//DCLSubSystem:
-	//	"subSystem" name=ID ";";
+	//	"subSystem" name=ID ("," "inSubSystem: " subSystem=[DCLStructureElement])? ";";
 	public DCLSubSystemElements getDCLSubSystemAccess() {
 		return pDCLSubSystem;
 	}

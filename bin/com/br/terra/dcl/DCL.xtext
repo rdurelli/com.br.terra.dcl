@@ -9,7 +9,7 @@ Model:
  DCLStructureElement: DCLLayer | DCLComponent | DCLSubSystem | DCLModule | DCLComponentInterface;
  
  DCLLayer:
- 	'layer' name=ID ',' 'level' level=INT (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';' ;
+ 	'layer' name=ID ',' 'level' level=INT ((',' 'inLayer: ' layer=[DCLStructureElement]) | (',''inSubSystem: ' subSystem=[DCLStructureElement])| (',''inComponent: ' component=[DCLStructureElement]))? ';';
  
  DCLComponent:
 'component' name=ID ((',' 'inLayer: ' layer=[DCLStructureElement]) | (',''inSubSystem: ' subSystem=[DCLStructureElement]))? ';';
@@ -23,8 +23,8 @@ Model:
  ;
  
  DCLSubSystem:
- 	'subSystem' name=ID ';'
- ;
+ 	'subSystem' name=ID (',' 'inSubSystem: ' subSystem=[DCLStructureElement])? ';' ;
+ 
  
  DCLModule:
  	'module' name=ID ';'

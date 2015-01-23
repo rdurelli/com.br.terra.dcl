@@ -276,13 +276,13 @@ ruleDCLLayer returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_5=',' 
+)((	otherlv_5=',' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_0());
+    	newLeafNode(otherlv_5, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_0_0());
     }
-	otherlv_6='inSubSystem: ' 
+	otherlv_6='inLayer: ' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getDCLLayerAccess().getInSubSystemKeyword_5_1());
+    	newLeafNode(otherlv_6, grammarAccess.getDCLLayerAccess().getInLayerKeyword_5_0_1());
     }
 (
 (
@@ -293,13 +293,57 @@ ruleDCLLayer returns [EObject current=null]
         }
 	otherlv_7=RULE_ID
 	{
-		newLeafNode(otherlv_7, grammarAccess.getDCLLayerAccess().getSubSystemDCLStructureElementCrossReference_5_2_0()); 
+		newLeafNode(otherlv_7, grammarAccess.getDCLLayerAccess().getLayerDCLStructureElementCrossReference_5_0_2_0()); 
 	}
 
 )
-))?	otherlv_8=';' 
+))
+    |(	otherlv_8=',' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getDCLLayerAccess().getSemicolonKeyword_6());
+    	newLeafNode(otherlv_8, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_1_0());
+    }
+	otherlv_9='inSubSystem: ' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getDCLLayerAccess().getInSubSystemKeyword_5_1_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLLayerRule());
+	        }
+        }
+	otherlv_10=RULE_ID
+	{
+		newLeafNode(otherlv_10, grammarAccess.getDCLLayerAccess().getSubSystemDCLStructureElementCrossReference_5_1_2_0()); 
+	}
+
+)
+))
+    |(	otherlv_11=',' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getDCLLayerAccess().getCommaKeyword_5_2_0());
+    }
+	otherlv_12='inComponent: ' 
+    {
+    	newLeafNode(otherlv_12, grammarAccess.getDCLLayerAccess().getInComponentKeyword_5_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLLayerRule());
+	        }
+        }
+	otherlv_13=RULE_ID
+	{
+		newLeafNode(otherlv_13, grammarAccess.getDCLLayerAccess().getComponentDCLStructureElementCrossReference_5_2_2_0()); 
+	}
+
+)
+)))?	otherlv_14=';' 
+    {
+    	newLeafNode(otherlv_14, grammarAccess.getDCLLayerAccess().getSemicolonKeyword_6());
     }
 )
 ;
@@ -575,9 +619,30 @@ ruleDCLSubSystem returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2=';' 
+)(	otherlv_2=',' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getDCLSubSystemAccess().getSemicolonKeyword_2());
+    	newLeafNode(otherlv_2, grammarAccess.getDCLSubSystemAccess().getCommaKeyword_2_0());
+    }
+	otherlv_3='inSubSystem: ' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getDCLSubSystemAccess().getInSubSystemKeyword_2_1());
+    }
+(
+(
+		{
+			if ($current==null) {
+	            $current = createModelElement(grammarAccess.getDCLSubSystemRule());
+	        }
+        }
+	otherlv_4=RULE_ID
+	{
+		newLeafNode(otherlv_4, grammarAccess.getDCLSubSystemAccess().getSubSystemDCLStructureElementCrossReference_2_2_0()); 
+	}
+
+)
+))?	otherlv_5=';' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getDCLSubSystemAccess().getSemicolonKeyword_3());
     }
 )
 ;
